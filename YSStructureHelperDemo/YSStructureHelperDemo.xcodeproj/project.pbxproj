@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */; };
 		DB2F2B871FD7D7E8006674E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B861FD7D7E8006674E7 /* AppDelegate.m */; };
 		DB2F2B8A1FD7D7E8006674E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B891FD7D7E8006674E7 /* ViewController.m */; };
 		DB2F2B8D1FD7D7E8006674E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2F2B8B1FD7D7E8006674E7 /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D5270C314DEC8986BDC241BE /* Pods-YSStructureHelperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2F2B821FD7D7E8006674E7 /* YSStructureHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSStructureHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2F2B851FD7D7E8006674E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB2F2B861FD7D7E8006674E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		DB2F2B9A1FD7D7E8006674E7 /* YSStructureHelperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YSStructureHelperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSStructureHelperDemoTests.m; sourceTree = "<group>"; };
 		DB2F2BA01FD7D7E8006674E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSStructureHelperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FD535053D5CD335B90AC184 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5270C314DEC8986BDC241BE /* Pods-YSStructureHelperDemo.debug.xcconfig */,
+				450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB53FE5AA3F0E848455610F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB2F2B791FD7D7E8006674E7 = {
 			isa = PBXGroup;
 			children = (
 				DB2F2B841FD7D7E8006674E7 /* YSStructureHelperDemo */,
 				DB2F2B9D1FD7D7E8006674E7 /* YSStructureHelperDemoTests */,
 				DB2F2B831FD7D7E8006674E7 /* Products */,
+				3FD535053D5CD335B90AC184 /* Pods */,
+				CB53FE5AA3F0E848455610F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB2F2BA31FD7D7E8006674E7 /* Build configuration list for PBXNativeTarget "YSStructureHelperDemo" */;
 			buildPhases = (
+				D81304B785C5152E4A2F73C2 /* [CP] Check Pods Manifest.lock */,
 				DB2F2B7E1FD7D7E8006674E7 /* Sources */,
 				DB2F2B7F1FD7D7E8006674E7 /* Frameworks */,
 				DB2F2B801FD7D7E8006674E7 /* Resources */,
+				80ACC73523B9512B261B42C8 /* [CP] Embed Pods Frameworks */,
+				903465BF746D29985639E78F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +242,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80ACC73523B9512B261B42C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		903465BF746D29985639E78F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D81304B785C5152E4A2F73C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB2F2B7E1FD7D7E8006674E7 /* Sources */ = {
@@ -371,6 +446,7 @@
 		};
 		DB2F2BA41FD7D7E8006674E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5270C314DEC8986BDC241BE /* Pods-YSStructureHelperDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -388,6 +464,7 @@
 		};
 		DB2F2BA51FD7D7E8006674E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
