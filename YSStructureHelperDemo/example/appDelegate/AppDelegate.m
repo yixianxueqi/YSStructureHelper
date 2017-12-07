@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+DefineService.h"
+#import <Aspects/Aspects.h>
 
 @interface AppDelegate ()
 

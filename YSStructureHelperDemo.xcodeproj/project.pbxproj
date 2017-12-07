@@ -10,7 +10,6 @@
 		D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */; };
 		DB2F2B9F1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */; };
 		DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2581FD95EBA004E6B74 /* UIViewController+LifeCycle.m */; };
-		DB33A25C1FD9671D004E6B74 /* NSObject+LifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A25B1FD9671D004E6B74 /* NSObject+LifeCycle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CBF1FD7F1530054176E /* YSLogger.m */; };
 		DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC01FD7F1530054176E /* YSLogFormat.m */; };
 		DBDC4CCD1FD7F1530054176E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC11FD7F1530054176E /* Assets.xcassets */; };
@@ -44,8 +43,6 @@
 		DB2F2BA01FD7D7E8006674E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB33A2571FD95EBA004E6B74 /* UIViewController+LifeCycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LifeCycle.h"; sourceTree = "<group>"; };
 		DB33A2581FD95EBA004E6B74 /* UIViewController+LifeCycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LifeCycle.m"; sourceTree = "<group>"; };
-		DB33A25A1FD9671D004E6B74 /* NSObject+LifeCycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+LifeCycle.h"; sourceTree = "<group>"; };
-		DB33A25B1FD9671D004E6B74 /* NSObject+LifeCycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LifeCycle.m"; sourceTree = "<group>"; };
 		DBDC4CBA1FD7F1530054176E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBDC4CBD1FD7F1530054176E /* YSLogFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogFormat.h; sourceTree = "<group>"; };
 		DBDC4CBE1FD7F1530054176E /* YSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogger.h; sourceTree = "<group>"; };
@@ -243,8 +240,6 @@
 		DBF657931FD9319500D9475F /* foundationCategory */ = {
 			isa = PBXGroup;
 			children = (
-				DB33A25A1FD9671D004E6B74 /* NSObject+LifeCycle.h */,
-				DB33A25B1FD9671D004E6B74 /* NSObject+LifeCycle.m */,
 			);
 			path = foundationCategory;
 			sourceTree = "<group>";
@@ -411,7 +406,6 @@
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
-				DB33A25C1FD9671D004E6B74 /* NSObject+LifeCycle.m in Sources */,
 				DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

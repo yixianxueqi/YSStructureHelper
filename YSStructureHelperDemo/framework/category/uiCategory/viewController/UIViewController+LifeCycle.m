@@ -20,6 +20,10 @@
     [UIViewController aspect_hookSelector:@selector(viewWillDisappear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated) {
         NSLog(@"%@ viewWillDisappear", [aspectInfo.instance class]);
     } error:nil];
+
+    [UIViewController aspect_hookSelector:NSSelectorFromString(@"dealloc") withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo) {
+        NSLog(@"%@ dealloc", [aspectInfo.instance class]);
+    } error:nil];
 }
 
 @end
