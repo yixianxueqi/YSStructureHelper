@@ -16,5 +16,7 @@
 - (void)showLoading;
 - (void)hideLoading;
 - (void)showAutoHideAlertMsg:(NSString *)msg;
+- (void)showAutoHideAlertMsg:(NSString *)msg offsetY:(CGFloat)offsetY;
+- (void)showAutoHideAlertMsg:(NSString *)msg offsetY:(CGFloat)offsetY duration:(NSTimeInterval)seconds;
 
 @end

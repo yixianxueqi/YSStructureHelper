@@ -30,6 +30,7 @@
     [super viewDidAppear: animated];
 
     [self.topLeftView showLoading];
+    [self.topRightView showAutoHideAlertMsg:@"111" offsetY:50.0 duration:5.0];
     [self.bottomView showAutoHideAlertMsg:@"233"];
 }
 
