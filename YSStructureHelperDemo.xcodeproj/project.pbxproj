@@ -10,6 +10,8 @@
 		D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */; };
 		DB2F2B9F1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */; };
 		DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2581FD95EBA004E6B74 /* UIViewController+LifeCycle.m */; };
+		DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */; };
+		DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */; };
 		DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CBF1FD7F1530054176E /* YSLogger.m */; };
 		DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC01FD7F1530054176E /* YSLogFormat.m */; };
 		DBDC4CCD1FD7F1530054176E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC11FD7F1530054176E /* Assets.xcassets */; };
@@ -43,6 +45,10 @@
 		DB2F2BA01FD7D7E8006674E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB33A2571FD95EBA004E6B74 /* UIViewController+LifeCycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LifeCycle.h"; sourceTree = "<group>"; };
 		DB33A2581FD95EBA004E6B74 /* UIViewController+LifeCycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LifeCycle.m"; sourceTree = "<group>"; };
+		DB33A2601FD9736C004E6B74 /* UIView+ShowTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowTipView.h"; sourceTree = "<group>"; };
+		DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowTipView.m"; sourceTree = "<group>"; };
+		DB33A2651FD97575004E6B74 /* YSShowTipDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSShowTipDemoViewController.h; sourceTree = "<group>"; };
+		DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSShowTipDemoViewController.m; sourceTree = "<group>"; };
 		DBDC4CBA1FD7F1530054176E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBDC4CBD1FD7F1530054176E /* YSLogFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogFormat.h; sourceTree = "<group>"; };
 		DBDC4CBE1FD7F1530054176E /* YSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogger.h; sourceTree = "<group>"; };
@@ -142,6 +148,24 @@
 			path = viewController;
 			sourceTree = "<group>";
 		};
+		DB33A2631FD97374004E6B74 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DB33A2601FD9736C004E6B74 /* UIView+ShowTipView.h */,
+				DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DB33A2641FD97550004E6B74 /* showTipVC */ = {
+			isa = PBXGroup;
+			children = (
+				DB33A2651FD97575004E6B74 /* YSShowTipDemoViewController.h */,
+				DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */,
+			);
+			path = showTipVC;
+			sourceTree = "<group>";
+		};
 		DBDC4CB91FD7F1530054176E /* YSStructureHelperDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +203,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				DB33A2641FD97550004E6B74 /* showTipVC */,
 				DBF6578A1FD9126B00D9475F /* logVC */,
 				DBDC4CD51FD7F2EB0054176E /* appDelegate */,
 				DBDC4CCA1FD7F1530054176E /* ViewController.h */,
@@ -232,6 +257,7 @@
 		DBF657921FD9315600D9475F /* uiCategory */ = {
 			isa = PBXGroup;
 			children = (
+				DB33A2631FD97374004E6B74 /* view */,
 				DB33A2531FD95E84004E6B74 /* viewController */,
 			);
 			path = uiCategory;
@@ -402,10 +428,12 @@
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
 				DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */,
 				DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */,
+				DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */,
 				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
+				DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */,
 				DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

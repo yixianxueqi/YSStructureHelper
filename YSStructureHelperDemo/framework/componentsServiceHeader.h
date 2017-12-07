@@ -13,5 +13,6 @@
 #define componentsServiceHeader_h
 
 #import "YSLogger.h"
+#import "UIView+ShowTipView.h"
 
 #endif /* componentsServiceHeader_h */
