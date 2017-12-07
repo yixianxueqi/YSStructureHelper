@@ -27,6 +27,11 @@
     [self customTabelView];
     [self getData];
 }
+
+- (void)dealloc {
+    log_info(@"%@ %s", NSStringFromClass(self.class), __FUNCTION__);
+}
+
 #pragma mark - public
 #pragma mark - incident
 #pragma mark - private

@@ -18,7 +18,6 @@ YSLogger为单例对象，初始化了日志功能，YSLogFormat是对日志输�
     [YSLogger setFileLogLevel: ddLogLevel];
     ```
     可实现YSLoggerRollFileDelegate协议，当日志被抛出时可做处理.
-    目前默认
     
     ```
     @interface AppDelegate()<YSLoggerRollFileDelegate>
@@ -29,4 +28,23 @@ YSLogger为单例对象，初始化了日志功能，YSLogFormat是对日志输�
     }
     ```
 
+* 打印
+    
+    ```
+    log_verbose(@"111");
+    log_debug(@"222");
+    log_info(@"333");
+    log_warn(@"444");
+    log_error(@"555");
+    ```
+    
+* 注意
+        目前默认为一周抛出一次，最多存在7个文件
+        默认开发模式写入文件的等级为：verbose
+        默认线上写入文件等级为：info
+        可修改。
+        
+
+### future
+     
 

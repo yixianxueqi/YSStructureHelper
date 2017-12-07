@@ -15,4 +15,8 @@
 #import "componentsServiceHeader.h"
 #import "thirdPartHeader.h"
 
+
+//替换系统的NSLog()
+#define NSLog(...) log_info(__VA_ARGS__)
+
 #endif /* Header_h */

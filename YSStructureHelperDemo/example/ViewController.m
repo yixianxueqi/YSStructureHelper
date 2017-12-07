@@ -25,14 +25,15 @@ static NSString * const DicVCKey = @"viewController";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    log_verbose(@"viewDidLoad");
-    log_verbose(@"%@",NSHomeDirectory());
+//    log_verbose(@"viewDidLoad");
+//    log_verbose(@"%@",NSHomeDirectory());
     [self customTabelView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    log_info(@"%@", NSStringFromSelector(_cmd));
+//    log_info(@"%@", NSStringFromSelector(_cmd));
+    
 }
 
 #pragma mark - public
