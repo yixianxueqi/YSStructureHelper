@@ -1,4 +1,8 @@
 language: objective-c
 osx_image: xcode9.0
+bundler_args: --retry 5
+rvm: 1.9.3
+before_install:
+  - gem install cocoapods -v '0.32.1'
 script:
 - xcodebuild -workspace YSStructureHelperDemo.xcworkspace -scheme YSStructureHelperDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

@@ -150,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				DBDC4CD91FD81D440054176E /* componentsServiceHeader.h */,
+				DBF657911FD9314B00D9475F /* category */,
 				DBDC4CBC1FD7F1530054176E /* components */,
 			);
 			path = framework;
@@ -205,6 +206,29 @@
 				DBF6578F1FD91E5400D9475F /* YSLogDetailViewController.m */,
 			);
 			path = logVC;
+			sourceTree = "<group>";
+		};
+		DBF657911FD9314B00D9475F /* category */ = {
+			isa = PBXGroup;
+			children = (
+				DBF657931FD9319500D9475F /* foundationCategory */,
+				DBF657921FD9315600D9475F /* uiCategory */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		DBF657921FD9315600D9475F /* uiCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = uiCategory;
+			sourceTree = "<group>";
+		};
+		DBF657931FD9319500D9475F /* foundationCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = foundationCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
