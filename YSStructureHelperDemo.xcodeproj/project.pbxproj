@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */; };
-		DB2F2B871FD7D7E8006674E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B861FD7D7E8006674E7 /* AppDelegate.m */; };
-		DB2F2B8A1FD7D7E8006674E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B891FD7D7E8006674E7 /* ViewController.m */; };
-		DB2F2B8D1FD7D7E8006674E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2F2B8B1FD7D7E8006674E7 /* Main.storyboard */; };
-		DB2F2B8F1FD7D7E8006674E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2F2B8E1FD7D7E8006674E7 /* Assets.xcassets */; };
-		DB2F2B921FD7D7E8006674E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2F2B901FD7D7E8006674E7 /* LaunchScreen.storyboard */; };
-		DB2F2B951FD7D7E8006674E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B941FD7D7E8006674E7 /* main.m */; };
 		DB2F2B9F1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */; };
+		DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CBF1FD7F1530054176E /* YSLogger.m */; };
+		DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC01FD7F1530054176E /* YSLogFormat.m */; };
+		DBDC4CCD1FD7F1530054176E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC11FD7F1530054176E /* Assets.xcassets */; };
+		DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC21FD7F1530054176E /* ViewController.m */; };
+		DBDC4CCF1FD7F1530054176E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC31FD7F1530054176E /* LaunchScreen.storyboard */; };
+		DBDC4CD01FD7F1530054176E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC51FD7F1530054176E /* Main.storyboard */; };
+		DBDC4CD11FD7F1530054176E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC71FD7F1530054176E /* main.m */; };
+		DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC81FD7F1530054176E /* AppDelegate.m */; };
+		DBDC4CD31FD7F1530054176E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC91FD7F1530054176E /* Info.plist */; };
+		DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CD71FD7F38C0054176E /* AppDelegate+DefineService.m */; };
+		DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF6578C1FD9129C00D9475F /* YSLogDemoViewController.m */; };
+		DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF6578F1FD91E5400D9475F /* YSLogDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,18 +37,31 @@
 		450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D5270C314DEC8986BDC241BE /* Pods-YSStructureHelperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2F2B821FD7D7E8006674E7 /* YSStructureHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSStructureHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB2F2B851FD7D7E8006674E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DB2F2B861FD7D7E8006674E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DB2F2B881FD7D7E8006674E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB2F2B891FD7D7E8006674E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DB2F2B8C1FD7D7E8006674E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DB2F2B8E1FD7D7E8006674E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB2F2B911FD7D7E8006674E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DB2F2B931FD7D7E8006674E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB2F2B941FD7D7E8006674E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB2F2B9A1FD7D7E8006674E7 /* YSStructureHelperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YSStructureHelperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSStructureHelperDemoTests.m; sourceTree = "<group>"; };
 		DB2F2BA01FD7D7E8006674E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBDC4CBA1FD7F1530054176E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DBDC4CBD1FD7F1530054176E /* YSLogFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogFormat.h; sourceTree = "<group>"; };
+		DBDC4CBE1FD7F1530054176E /* YSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogger.h; sourceTree = "<group>"; };
+		DBDC4CBF1FD7F1530054176E /* YSLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLogger.m; sourceTree = "<group>"; };
+		DBDC4CC01FD7F1530054176E /* YSLogFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLogFormat.m; sourceTree = "<group>"; };
+		DBDC4CC11FD7F1530054176E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBDC4CC21FD7F1530054176E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DBDC4CC41FD7F1530054176E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBDC4CC61FD7F1530054176E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBDC4CC71FD7F1530054176E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBDC4CC81FD7F1530054176E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBDC4CC91FD7F1530054176E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBDC4CCA1FD7F1530054176E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DBDC4CD61FD7F38C0054176E /* AppDelegate+DefineService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DefineService.h"; sourceTree = "<group>"; };
+		DBDC4CD71FD7F38C0054176E /* AppDelegate+DefineService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DefineService.m"; sourceTree = "<group>"; };
+		DBDC4CD91FD81D440054176E /* componentsServiceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = componentsServiceHeader.h; sourceTree = "<group>"; };
+		DBF657881FD90FBA00D9475F /* thirdPartHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thirdPartHeader.h; sourceTree = "<group>"; };
+		DBF657891FD9106400D9475F /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		DBF6578B1FD9129C00D9475F /* YSLogDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSLogDemoViewController.h; sourceTree = "<group>"; };
+		DBF6578C1FD9129C00D9475F /* YSLogDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSLogDemoViewController.m; sourceTree = "<group>"; };
+		DBF6578E1FD91E5400D9475F /* YSLogDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSLogDetailViewController.h; sourceTree = "<group>"; };
+		DBF6578F1FD91E5400D9475F /* YSLogDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSLogDetailViewController.m; sourceTree = "<group>"; };
 		ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSStructureHelperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,7 +104,7 @@
 		DB2F2B791FD7D7E8006674E7 = {
 			isa = PBXGroup;
 			children = (
-				DB2F2B841FD7D7E8006674E7 /* YSStructureHelperDemo */,
+				DBDC4CB91FD7F1530054176E /* YSStructureHelperDemo */,
 				DB2F2B9D1FD7D7E8006674E7 /* YSStructureHelperDemoTests */,
 				DB2F2B831FD7D7E8006674E7 /* Products */,
 				3FD535053D5CD335B90AC184 /* Pods */,
@@ -102,24 +121,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB2F2B841FD7D7E8006674E7 /* YSStructureHelperDemo */ = {
-			isa = PBXGroup;
-			children = (
-				DB2F2BAA1FD7D878006674E7 /* framework */,
-				DB2F2BA91FD7D86B006674E7 /* demo */,
-				DB2F2B851FD7D7E8006674E7 /* AppDelegate.h */,
-				DB2F2B861FD7D7E8006674E7 /* AppDelegate.m */,
-				DB2F2B881FD7D7E8006674E7 /* ViewController.h */,
-				DB2F2B891FD7D7E8006674E7 /* ViewController.m */,
-				DB2F2B8B1FD7D7E8006674E7 /* Main.storyboard */,
-				DB2F2B8E1FD7D7E8006674E7 /* Assets.xcassets */,
-				DB2F2B901FD7D7E8006674E7 /* LaunchScreen.storyboard */,
-				DB2F2B931FD7D7E8006674E7 /* Info.plist */,
-				DB2F2B941FD7D7E8006674E7 /* main.m */,
-			);
-			path = YSStructureHelperDemo;
-			sourceTree = "<group>";
-		};
 		DB2F2B9D1FD7D7E8006674E7 /* YSStructureHelperDemoTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,18 +130,81 @@
 			path = YSStructureHelperDemoTests;
 			sourceTree = "<group>";
 		};
-		DB2F2BA91FD7D86B006674E7 /* demo */ = {
+		DBDC4CB91FD7F1530054176E /* YSStructureHelperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DBDC4CD41FD7F2D00054176E /* example */,
+				DBDC4CBB1FD7F1530054176E /* framework */,
+				DBDC4CC11FD7F1530054176E /* Assets.xcassets */,
+				DBDC4CC31FD7F1530054176E /* LaunchScreen.storyboard */,
+				DBDC4CC51FD7F1530054176E /* Main.storyboard */,
+				DBDC4CC91FD7F1530054176E /* Info.plist */,
+				DBDC4CC71FD7F1530054176E /* main.m */,
+				DBF657881FD90FBA00D9475F /* thirdPartHeader.h */,
+				DBF657891FD9106400D9475F /* Header.h */,
 			);
-			path = demo;
+			path = YSStructureHelperDemo;
 			sourceTree = "<group>";
 		};
-		DB2F2BAA1FD7D878006674E7 /* framework */ = {
+		DBDC4CBB1FD7F1530054176E /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				DBDC4CD91FD81D440054176E /* componentsServiceHeader.h */,
+				DBDC4CBC1FD7F1530054176E /* components */,
 			);
 			path = framework;
+			sourceTree = "<group>";
+		};
+		DBDC4CBC1FD7F1530054176E /* components */ = {
+			isa = PBXGroup;
+			children = (
+				DBF657871FD8D5AD00D9475F /* logger */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		DBDC4CD41FD7F2D00054176E /* example */ = {
+			isa = PBXGroup;
+			children = (
+				DBF6578A1FD9126B00D9475F /* logVC */,
+				DBDC4CD51FD7F2EB0054176E /* appDelegate */,
+				DBDC4CCA1FD7F1530054176E /* ViewController.h */,
+				DBDC4CC21FD7F1530054176E /* ViewController.m */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		DBDC4CD51FD7F2EB0054176E /* appDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DBDC4CBA1FD7F1530054176E /* AppDelegate.h */,
+				DBDC4CC81FD7F1530054176E /* AppDelegate.m */,
+				DBDC4CD61FD7F38C0054176E /* AppDelegate+DefineService.h */,
+				DBDC4CD71FD7F38C0054176E /* AppDelegate+DefineService.m */,
+			);
+			path = appDelegate;
+			sourceTree = "<group>";
+		};
+		DBF657871FD8D5AD00D9475F /* logger */ = {
+			isa = PBXGroup;
+			children = (
+				DBDC4CBE1FD7F1530054176E /* YSLogger.h */,
+				DBDC4CBF1FD7F1530054176E /* YSLogger.m */,
+				DBDC4CBD1FD7F1530054176E /* YSLogFormat.h */,
+				DBDC4CC01FD7F1530054176E /* YSLogFormat.m */,
+			);
+			path = logger;
+			sourceTree = "<group>";
+		};
+		DBF6578A1FD9126B00D9475F /* logVC */ = {
+			isa = PBXGroup;
+			children = (
+				DBF6578B1FD9129C00D9475F /* YSLogDemoViewController.h */,
+				DBF6578C1FD9129C00D9475F /* YSLogDemoViewController.m */,
+				DBF6578E1FD91E5400D9475F /* YSLogDetailViewController.h */,
+				DBF6578F1FD91E5400D9475F /* YSLogDetailViewController.m */,
+			);
+			path = logVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +292,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB2F2B921FD7D7E8006674E7 /* LaunchScreen.storyboard in Resources */,
-				DB2F2B8F1FD7D7E8006674E7 /* Assets.xcassets in Resources */,
-				DB2F2B8D1FD7D7E8006674E7 /* Main.storyboard in Resources */,
+				DBDC4CD31FD7F1530054176E /* Info.plist in Resources */,
+				DBDC4CD01FD7F1530054176E /* Main.storyboard in Resources */,
+				DBDC4CCD1FD7F1530054176E /* Assets.xcassets in Resources */,
+				DBDC4CCF1FD7F1530054176E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,9 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB2F2B8A1FD7D7E8006674E7 /* ViewController.m in Sources */,
-				DB2F2B951FD7D7E8006674E7 /* main.m in Sources */,
-				DB2F2B871FD7D7E8006674E7 /* AppDelegate.m in Sources */,
+				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
+				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
+				DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */,
+				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
+				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
+				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
+				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
+				DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,20 +391,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB2F2B8B1FD7D7E8006674E7 /* Main.storyboard */ = {
+		DBDC4CC31FD7F1530054176E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB2F2B8C1FD7D7E8006674E7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DB2F2B901FD7D7E8006674E7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB2F2B911FD7D7E8006674E7 /* Base */,
+				DBDC4CC41FD7F1530054176E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DBDC4CC51FD7F1530054176E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBDC4CC61FD7F1530054176E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -451,6 +521,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3X434F5U2F;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YSStructureHelperDemo/Header.h";
 				INFOPLIST_FILE = YSStructureHelperDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -470,6 +541,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3X434F5U2F;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YSStructureHelperDemo/Header.h";
 				INFOPLIST_FILE = YSStructureHelperDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

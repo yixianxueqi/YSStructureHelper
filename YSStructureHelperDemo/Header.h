@@ -1,0 +1,18 @@
+//
+//  Header.h
+//  YSStructureHelperDemo
+//
+//  Created by 君若见故 on 2017/12/7.
+//  Copyright © 2017年 develop. All rights reserved.
+//
+
+/*
+  设置全局先引入文件
+ */
+#ifndef Header_h
+#define Header_h
+
+#import "componentsServiceHeader.h"
+#import "thirdPartHeader.h"
+
+#endif /* Header_h */

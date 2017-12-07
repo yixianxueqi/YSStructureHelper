@@ -1,0 +1,28 @@
+PODS:
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
+  - IQKeyboardManager (4.0.4)
+  - Masonry (1.0.1)
+  - MBProgressHUD (1.0.0)
+
+DEPENDENCIES:
+  - CocoaLumberjack (= 2.3.0)
+  - IQKeyboardManager (= 4.0.4)
+  - Masonry (= 1.0.1)
+  - MBProgressHUD (= 1.0.0)
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+
+PODFILE CHECKSUM: f2a029149f991822ae899f48dc5f17aece623402
+
+COCOAPODS: 1.2.1
