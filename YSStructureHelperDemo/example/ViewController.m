@@ -29,7 +29,7 @@ static NSString * const DicVCKey = @"viewController";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];    
+    [super viewDidAppear:animated];
 }
 
 #pragma mark - public
@@ -84,7 +84,8 @@ static NSString * const DicVCKey = @"viewController";
 - (NSArray *)vcList {
     if (!_vcList) {
         _vcList = @[@{DicTitleKey: @"查看日志", DicVCKey: @"YSLogDemoViewController"},
-                    @{DicTitleKey: @"查看弹窗", DicVCKey: @"YSShowTipDemoViewController"}];
+                    @{DicTitleKey: @"查看弹窗", DicVCKey: @"YSShowTipDemoViewController"},
+                    @{DicTitleKey: @"网络", DicVCKey: @"YSNetworkDemoViewController"}];
     }
     return _vcList;
 }

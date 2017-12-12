@@ -25,6 +25,9 @@
 		DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CD71FD7F38C0054176E /* AppDelegate+DefineService.m */; };
 		DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF6578C1FD9129C00D9475F /* YSLogDemoViewController.m */; };
 		DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF6578F1FD91E5400D9475F /* YSLogDetailViewController.m */; };
+		DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFD7EA91FDF7E3B0037939A /* YSNetWork.m */; };
+		DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFD7EAC1FDF7F2E0037939A /* UIApplication+NetworkStatus.m */; };
+		DBFD7EB11FDFAEFE0037939A /* YSNetworkDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFD7EB01FDFAEFE0037939A /* YSNetworkDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,12 @@
 		DBF6578C1FD9129C00D9475F /* YSLogDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSLogDemoViewController.m; sourceTree = "<group>"; };
 		DBF6578E1FD91E5400D9475F /* YSLogDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSLogDetailViewController.h; sourceTree = "<group>"; };
 		DBF6578F1FD91E5400D9475F /* YSLogDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSLogDetailViewController.m; sourceTree = "<group>"; };
+		DBFD7EA81FDF7E3B0037939A /* YSNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetWork.h; sourceTree = "<group>"; };
+		DBFD7EA91FDF7E3B0037939A /* YSNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetWork.m; sourceTree = "<group>"; };
+		DBFD7EAB1FDF7F2E0037939A /* UIApplication+NetworkStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkStatus.h"; sourceTree = "<group>"; };
+		DBFD7EAC1FDF7F2E0037939A /* UIApplication+NetworkStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkStatus.m"; sourceTree = "<group>"; };
+		DBFD7EAF1FDFAEFE0037939A /* YSNetworkDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetworkDemoViewController.h; sourceTree = "<group>"; };
+		DBFD7EB01FDFAEFE0037939A /* YSNetworkDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetworkDemoViewController.m; sourceTree = "<group>"; };
 		ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSStructureHelperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,6 +207,7 @@
 		DBDC4CBC1FD7F1530054176E /* components */ = {
 			isa = PBXGroup;
 			children = (
+				DBFD7EA71FDF7E1E0037939A /* network */,
 				DBF657871FD8D5AD00D9475F /* logger */,
 			);
 			path = components;
@@ -206,6 +216,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				DBFD7EAE1FDFAEDE0037939A /* network */,
 				DB33A2641FD97550004E6B74 /* showTipVC */,
 				DBF6578A1FD9126B00D9475F /* logVC */,
 				DBDC4CD51FD7F2EB0054176E /* appDelegate */,
@@ -273,6 +284,26 @@
 			children = (
 			);
 			path = foundationCategory;
+			sourceTree = "<group>";
+		};
+		DBFD7EA71FDF7E1E0037939A /* network */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD7EA81FDF7E3B0037939A /* YSNetWork.h */,
+				DBFD7EA91FDF7E3B0037939A /* YSNetWork.m */,
+				DBFD7EAB1FDF7F2E0037939A /* UIApplication+NetworkStatus.h */,
+				DBFD7EAC1FDF7F2E0037939A /* UIApplication+NetworkStatus.m */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		DBFD7EAE1FDFAEDE0037939A /* network */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD7EAF1FDFAEFE0037939A /* YSNetworkDemoViewController.h */,
+				DBFD7EB01FDFAEFE0037939A /* YSNetworkDemoViewController.m */,
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,12 +461,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
+				DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */,
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
+				DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */,
 				DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */,
 				DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */,
 				DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */,
 				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
+				DBFD7EB11FDFAEFE0037939A /* YSNetworkDemoViewController.m in Sources */,
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
 				DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,

@@ -18,4 +18,9 @@
  */
 - (void)startLogger;
 
+/**
+ 启动网络状态监听
+ */
+- (void)listenNetworkStatus;
+
 @end

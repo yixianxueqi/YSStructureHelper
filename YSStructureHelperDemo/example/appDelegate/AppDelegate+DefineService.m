@@ -37,4 +37,9 @@
     log_info(@"roll: %@",path);
 }
 
+#pragma mark - network status
+- (void)listenNetworkStatus {
+    [[UIApplication sharedApplication] startListenNetworkStatus];
+}
+
 @end
