@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="580" y="118"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav View Controller-->
         <scene sceneID="bV0-j4-QL1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BU1-nM-94o" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BU1-nM-94o" customClass="YSNavViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="g8q-KH-FPW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

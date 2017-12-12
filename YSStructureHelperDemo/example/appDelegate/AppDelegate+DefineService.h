@@ -10,6 +10,9 @@
 
 @interface AppDelegate (DefineService)
 
+//设置视图结构
+- (void)customVCHierachy;
+
 /**
  启动日志组件
  */

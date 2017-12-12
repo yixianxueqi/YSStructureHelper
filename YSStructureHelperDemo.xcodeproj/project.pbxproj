@@ -12,6 +12,7 @@
 		DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2581FD95EBA004E6B74 /* UIViewController+LifeCycle.m */; };
 		DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */; };
 		DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */; };
+		DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */; };
 		DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CBF1FD7F1530054176E /* YSLogger.m */; };
 		DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC01FD7F1530054176E /* YSLogFormat.m */; };
 		DBDC4CCD1FD7F1530054176E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC11FD7F1530054176E /* Assets.xcassets */; };
@@ -49,6 +50,8 @@
 		DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowTipView.m"; sourceTree = "<group>"; };
 		DB33A2651FD97575004E6B74 /* YSShowTipDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSShowTipDemoViewController.h; sourceTree = "<group>"; };
 		DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSShowTipDemoViewController.m; sourceTree = "<group>"; };
+		DB55CA671FDA7B1C002911C9 /* YSNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNavViewController.h; sourceTree = "<group>"; };
+		DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNavViewController.m; sourceTree = "<group>"; };
 		DBDC4CBA1FD7F1530054176E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBDC4CBD1FD7F1530054176E /* YSLogFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogFormat.h; sourceTree = "<group>"; };
 		DBDC4CBE1FD7F1530054176E /* YSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogger.h; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				DBDC4CD51FD7F2EB0054176E /* appDelegate */,
 				DBDC4CCA1FD7F1530054176E /* ViewController.h */,
 				DBDC4CC21FD7F1530054176E /* ViewController.m */,
+				DB55CA671FDA7B1C002911C9 /* YSNavViewController.h */,
+				DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */,
 			);
 			path = example;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
+				DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
 				DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */,
 				DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */,

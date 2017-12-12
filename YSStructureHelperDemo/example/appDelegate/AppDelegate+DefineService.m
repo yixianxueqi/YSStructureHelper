@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate+DefineService.h"
+#import "YSNavViewController.h"
+#import "ViewController.h"
 #import "YSLogger.h"
 
 @interface AppDelegate()<YSLoggerRollFileDelegate>
@@ -14,6 +16,13 @@
 @end
 
 @implementation AppDelegate (DefineService)
+
+- (void)customVCHierachy {
+
+    YSNavViewController *navVC = [[YSNavViewController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    [UIApplication sharedApplication].keyWindow.rootViewController = navVC;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+}
 
 #pragma mark - logger
 - (void)startLogger {
