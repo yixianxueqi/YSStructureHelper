@@ -58,8 +58,8 @@ NSString * const YSNetworkStatusItem = @"YSNetworkStatusItem";
 }
 
 - (void)isReachableHostname:(NSString *)hostName
-               successBlock:(nullable void (^)(void))successBlock
-               failureBlock:(nullable void (^)(void))failureBlock {
+               successBlock:(nonnull void (^)(void))successBlock
+               failureBlock:(nonnull void (^)(void))failureBlock {
 
     Reachability *reach = [Reachability reachabilityWithHostname: hostName];
     reach.reachableBlock = ^(Reachability *reachability) {
@@ -84,7 +84,7 @@ NSString * const YSNetworkStatusItem = @"YSNetworkStatusItem";
 
 - (void)setCurrentStatus:(YSNetworkStatus)currentStatus {
 
-    objc_setAssociatedObject(self, @selector(currentStatus), @(currentStatus), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(currentStatus), @(currentStatus), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [[NSNotificationCenter defaultCenter] postNotificationName:YSNetworkStatusChangedNotification object:self userInfo:@{YSNetworkStatusItem: @(self.currentStatus)}];
 }
 

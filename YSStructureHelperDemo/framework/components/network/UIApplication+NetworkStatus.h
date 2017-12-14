@@ -10,7 +10,7 @@
 
 /*
      网络监测类别 UIApplication+NetworkStatus
-     当前网络状态归app共有，因此将相关网络状态检测方法及属性以类别的形式添加至UIApplication下，
+     当前网络状态归app所有，因此将相关网络状态检测方法及属性以类别的形式添加至UIApplication下，
      可以在app全局内通过[[UIApplication sharedApplication] currentStatus]访问到网络状态相关
      网络状态主要依赖三方：AFNetworking，Reachability
      网络状态以AFNetworking状态为原本，Reachability主要为检测是否可访问指定地址之用
@@ -65,7 +65,7 @@ extern NSString * const YSNetworkStatusItem;
  @param failureBlock 失败回调
  */
 - (void)isReachableHostname:(NSString *)hostName
-               successBlock:(nullable void(^)(void))successBlock
-               failureBlock:(nullable void(^)(void))failureBlock;
+               successBlock:(nonnull void(^)(void))successBlock
+               failureBlock:(nonnull void(^)(void))failureBlock;
 
 @end

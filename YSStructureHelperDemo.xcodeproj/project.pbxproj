@@ -13,6 +13,8 @@
 		DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */; };
 		DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */; };
 		DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */; };
+		DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BB1FDFD56600491251 /* YSNetworkCache.m */; };
+		DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BE1FE0FF9C00491251 /* YSNetworkFailureHandle.m */; };
 		DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CBF1FD7F1530054176E /* YSLogger.m */; };
 		DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC01FD7F1530054176E /* YSLogFormat.m */; };
 		DBDC4CCD1FD7F1530054176E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC11FD7F1530054176E /* Assets.xcassets */; };
@@ -55,6 +57,10 @@
 		DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSShowTipDemoViewController.m; sourceTree = "<group>"; };
 		DB55CA671FDA7B1C002911C9 /* YSNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNavViewController.h; sourceTree = "<group>"; };
 		DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNavViewController.m; sourceTree = "<group>"; };
+		DBB836BA1FDFD56600491251 /* YSNetworkCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetworkCache.h; sourceTree = "<group>"; };
+		DBB836BB1FDFD56600491251 /* YSNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetworkCache.m; sourceTree = "<group>"; };
+		DBB836BD1FE0FF9C00491251 /* YSNetworkFailureHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetworkFailureHandle.h; sourceTree = "<group>"; };
+		DBB836BE1FE0FF9C00491251 /* YSNetworkFailureHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetworkFailureHandle.m; sourceTree = "<group>"; };
 		DBDC4CBA1FD7F1530054176E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBDC4CBD1FD7F1530054176E /* YSLogFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogFormat.h; sourceTree = "<group>"; };
 		DBDC4CBE1FD7F1530054176E /* YSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogger.h; sourceTree = "<group>"; };
@@ -291,8 +297,12 @@
 			children = (
 				DBFD7EA81FDF7E3B0037939A /* YSNetWork.h */,
 				DBFD7EA91FDF7E3B0037939A /* YSNetWork.m */,
+				DBB836BA1FDFD56600491251 /* YSNetworkCache.h */,
+				DBB836BB1FDFD56600491251 /* YSNetworkCache.m */,
 				DBFD7EAB1FDF7F2E0037939A /* UIApplication+NetworkStatus.h */,
 				DBFD7EAC1FDF7F2E0037939A /* UIApplication+NetworkStatus.m */,
+				DBB836BD1FE0FF9C00491251 /* YSNetworkFailureHandle.h */,
+				DBB836BE1FE0FF9C00491251 /* YSNetworkFailureHandle.m */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -465,7 +475,9 @@
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
 				DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */,
 				DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */,
+				DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */,
 				DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */,
+				DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */,
 				DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */,
 				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,

@@ -27,6 +27,9 @@ PODS:
   - Masonry (1.0.1)
   - MBProgressHUD (1.0.0)
   - Reachability (3.2)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
@@ -36,6 +39,7 @@ DEPENDENCIES:
   - Masonry (= 1.0.1)
   - MBProgressHUD (= 1.0.0)
   - Reachability (= 3.2)
+  - YYKit (= 1.0.9)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -45,7 +49,8 @@ SPEC CHECKSUMS:
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 6bb30f3f702ed37c1b1b5b1f9d8972a0d4ce563f
+PODFILE CHECKSUM: d955aec64a6268b85e94f2df843fd4352484dda7
 
 COCOAPODS: 1.2.1
