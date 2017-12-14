@@ -42,10 +42,10 @@ static NSString *localDesc = @"localDesc";
             case NSURLErrorBadURL:desc = @"错误的请求地址";break;
             case NSURLErrorTimedOut:desc = @"请求超时,请重试";break;
             case NSURLErrorUnsupportedURL:desc = @"不支持的请求地址";break;
-            case NSURLErrorCannotConnectToHost:desc = @"未能和主机建立链接";break;
+            case NSURLErrorCannotConnectToHost:desc = @"未能和服务器建立链接";break;
             case NSURLErrorNetworkConnectionLost:desc = @"网络链接已断开,请检查网络";break;
             case NSURLErrorNotConnectedToInternet:desc = @"未链接网络,请先链接网络";break;
-            case NSURLErrorBadServerResponse:desc = @"未链接网络,请先链接网络";break;
+            case NSURLErrorBadServerResponse:desc = @"访问了服务器未提供的服务";break;
             case NSURLErrorFileDoesNotExist:desc = @"请求资源不存在";break;
         default:
             desc = error.localizedDescription;

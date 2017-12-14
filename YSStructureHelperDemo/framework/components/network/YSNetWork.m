@@ -84,6 +84,32 @@ static YSNetWork *netwok;
     }];
 }
 
+- (NSURLSessionDataTask *)POST:(NSString *)URLString
+                    parameters:(NSDictionary *)parameters
+                   cachePolicy:(YSNetworkCachePolicy)cachePolicy
+                      progress:(requestProgressBlock)progress
+                       success:(requestSuccessBlock)success
+                       failure:(requestFailureBlock)failure {
+
+    return [self.sessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progress) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                progress(uploadProgress);
+            });
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if(success) {
+            success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            NSError *localError = [YSNetworkFailureHandle handleNetworkFailure:error];
+            failure(localError);
+        }
+    }];
+
+}
+
 #pragma mark - getter/setter
 - (AFHTTPSessionManager *)sessionManager {
     if(!_sessionManager) {

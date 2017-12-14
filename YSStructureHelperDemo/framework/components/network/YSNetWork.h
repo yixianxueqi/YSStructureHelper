@@ -109,6 +109,25 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
                       failure:(requestFailureBlock)failure;
 
 
+
+/**
+ Post请求
+
+ @param URLString 请求地址
+ @param parameters 请求参数
+ @param cachePolicy 缓存策略
+ @param progress 请求内容上传进度
+ @param success 成功回调
+ @param failure 失败回调
+ @return NSURLSessionDataTask *
+ */
+- (NSURLSessionDataTask *)POST:(NSString *)URLString
+                   parameters:(NSDictionary *)parameters
+                  cachePolicy:(YSNetworkCachePolicy)cachePolicy
+                     progress:(requestProgressBlock)progress
+                      success:(requestSuccessBlock)success
+                      failure:(requestFailureBlock)failure;
+
 @end
 
 

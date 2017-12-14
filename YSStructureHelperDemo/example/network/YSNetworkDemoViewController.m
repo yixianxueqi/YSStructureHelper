@@ -91,6 +91,19 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
 
 - (void)postHttp {
 
+    log_info(@"HEADERS: %@", [self.network getAllHeaders]);
+    log_info(@"AcceptContentType: %@", [self.network getAllresponseAcceptableContentType]);
+    __weak typeof(self) weakSelf = self;
+    [self.network POST:postUrl parameters:postParams cachePolicy:YSNetworkCachePolicy_none progress:^(NSProgress *progress) {
+        __strong __typeof(self) strongSelf = weakSelf;
+        strongSelf.progress.progress = progress.fractionCompleted;
+    } success:^(id responseObj) {
+        __strong __typeof(self) strongSelf = weakSelf;
+        strongSelf.textView.text = [NSString stringWithFormat:@"SUCCESS:\n%@", responseObj];
+    } failure:^(NSError *error) {
+        __strong __typeof(self) strongSelf = weakSelf;
+        strongSelf.textView.text = [NSString stringWithFormat:@"FAILURE:\n%@", error.localizedDescription];
+    }];
 }
 
 - (void)downloadHttp {
@@ -127,6 +140,7 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
         //upload
         [self uploadHttp];
     }
+    self.textView.text = @"loading...";
 }
 
 #pragma mark - private
