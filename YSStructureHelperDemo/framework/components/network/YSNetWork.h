@@ -19,7 +19,7 @@ typedef void(^requestProgressBlock)(NSProgress *progress);
 typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
 
     /*
-     总是使用缓存数据，无则返回失败
+     总是使用缓存数据，无则请求数据
      */
     YSNetworkCachePolicy_cache = 1,
     /*
@@ -29,14 +29,14 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
      */
     YSNetworkCachePolicy_cacheAndRequest,
     /*
-     总是发起请求
-     */
-    YSNetworkCachePolicy_request,
-    /*
      使用有限制的缓存，在一定时间内使用缓存数据，超出时间则是发起新的请求。
      例：在60s内重复请求同一接口，则使用缓存数据，超出60s后，则发起新的请求去请求数据，并更新缓存
      */
     YSNetworkCachePolicy_cacheWithLimitTime,
+    /*
+     总是发起请求
+     */
+    YSNetworkCachePolicy_request,
     /*
      无缓存策略
      */
@@ -45,6 +45,13 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
 
 
 @interface YSNetWork : NSObject
+
+/*
+ 当缓存策略为YSNetworkCachePolicy_cacheWithLimitTime时有效,
+ 设置在指定时间差内取缓存，超出则发起新的请求
+ 默认60s
+ */
+@property (nonatomic, assign) NSTimeInterval cacheTimeLimit;
 
 + (instancetype)defaultNetwork;
 #pragma mark - settings

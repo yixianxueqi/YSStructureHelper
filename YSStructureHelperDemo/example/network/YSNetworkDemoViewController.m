@@ -77,7 +77,7 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
     log_info(@"HEADERS: %@", [self.network getAllHeaders]);
     log_info(@"AcceptContentType: %@", [self.network getAllresponseAcceptableContentType]);
     __weak typeof(self) weakSelf = self;
-    [self.network GET:getUrl parameters:getParams cachePolicy:YSNetworkCachePolicy_none progress:^(NSProgress *progress) {
+    [self.network GET:getUrl parameters:getParams cachePolicy:YSNetworkCachePolicy_cache progress:^(NSProgress *progress) {
         __strong __typeof(self) strongSelf = weakSelf;
         strongSelf.progress.progress = progress.fractionCompleted;
     } success:^(id responseObj) {
@@ -85,7 +85,9 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
         strongSelf.textView.text = [NSString stringWithFormat:@"SUCCESS:\n%@", responseObj];
     } failure:^(NSError *error) {
         __strong __typeof(self) strongSelf = weakSelf;
-        strongSelf.textView.text = [NSString stringWithFormat:@"FAILURE:\n%@", error.localizedDescription];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            strongSelf.textView.text = [NSString stringWithFormat:@"FAILURE:\n%@", error.localizedDescription];
+        });
     }];
 }
 

@@ -299,10 +299,10 @@
 				DBFD7EA91FDF7E3B0037939A /* YSNetWork.m */,
 				DBB836BA1FDFD56600491251 /* YSNetworkCache.h */,
 				DBB836BB1FDFD56600491251 /* YSNetworkCache.m */,
-				DBFD7EAB1FDF7F2E0037939A /* UIApplication+NetworkStatus.h */,
-				DBFD7EAC1FDF7F2E0037939A /* UIApplication+NetworkStatus.m */,
 				DBB836BD1FE0FF9C00491251 /* YSNetworkFailureHandle.h */,
 				DBB836BE1FE0FF9C00491251 /* YSNetworkFailureHandle.m */,
+				DBFD7EAB1FDF7F2E0037939A /* UIApplication+NetworkStatus.h */,
+				DBFD7EAC1FDF7F2E0037939A /* UIApplication+NetworkStatus.m */,
 			);
 			path = network;
 			sourceTree = "<group>";
