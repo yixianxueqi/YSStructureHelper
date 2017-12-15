@@ -25,6 +25,7 @@ static NSString * const DicVCKey = @"viewController";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    log_debug(@"%@", NSHomeDirectory());
     [self customTabelView];
 }
 

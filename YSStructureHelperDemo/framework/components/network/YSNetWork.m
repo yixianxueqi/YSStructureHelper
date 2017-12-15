@@ -137,6 +137,44 @@ static YSNetWork *netwok;
                        success:(requestSuccessBlock)success
                        failure:(requestFailureBlock)failure {
 
+    NSString *cacheKey = [self getCacheKeyFromURLString:URLString params:parameters];
+    switch (cachePolicy) {
+        case YSNetworkCachePolicy_cache: {
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cache cacheKey:cacheKey];
+            if (isAvailableCache) {
+                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
+                    success(result);
+                }];
+                return nil;
+            }
+        }
+            break;
+        case YSNetworkCachePolicy_cacheWithLimitTime: {
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheWithLimitTime cacheKey:cacheKey];
+            if (isAvailableCache) {
+                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
+                    log_debug(@"使用缓存");
+                    success(result);
+                }];
+                return nil;
+            }
+        }
+            break;
+        case YSNetworkCachePolicy_cacheAndRequest: {
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheAndRequest cacheKey:cacheKey];
+            if (isAvailableCache) {
+                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
+                    success(result);
+                }];
+            }
+        }
+            break;
+        case YSNetworkCachePolicy_request:
+            break;
+        case YSNetworkCachePolicy_none:
+            break;
+    }
+
     return [self.sessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progress) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -144,6 +182,12 @@ static YSNetWork *netwok;
             });
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (cachePolicy == YSNetworkCachePolicy_cache ||
+            cachePolicy == YSNetworkCachePolicy_cacheAndRequest ||
+            cachePolicy == YSNetworkCachePolicy_cacheWithLimitTime) {
+            [self.networkCache setObject:responseObject forKey:cacheKey withBlock:nil];
+        }
+        log_debug(@"发起请求");
         if(success) {
             success(responseObject);
         }
@@ -153,7 +197,6 @@ static YSNetWork *netwok;
             failure(localError);
         }
     }];
-
 }
 
 #pragma mark - private
