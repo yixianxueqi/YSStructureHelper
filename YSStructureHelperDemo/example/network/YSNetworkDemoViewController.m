@@ -8,13 +8,14 @@
 
 #import "YSNetworkDemoViewController.h"
 #import "YSNetWork.h"
+#import "YSStreamNetwork.h"
 
 #define getParams @{@"strDate": @"2015-05-25", @"strRow": @"1"}
 #define postParams @{@"foo": @[@(1), @(2), @(3)], @"bar": @{@"baz": @"qux"}}
 
 static NSString * const getUrl = @"https://httpbin.org/get";
 static NSString * const postUrl = @"https://httpbin.org/post";
-static NSString * const downloadUrl = @"http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg";
+static NSString * const downloadUrl = @"http://dl_dir.qq.com/qqfile/qq/QQforMac/QQ_V2.4.1.dmg";
 static NSString * const uploadUrl = @"https://httpbin.org/post";
 
 @interface YSNetworkDemoViewController ()
@@ -35,7 +36,7 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
     self.view.backgroundColor = [UIColor whiteColor];
     //注册网络监听通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStatusChangedNotificationHandle:) name:YSNetworkStatusChangedNotification object:nil];
-
+    
     [self customView];
 }
 
@@ -109,10 +110,59 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
 
 - (void)downloadHttp {
 
+    NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    __weak typeof(self) weakSelf = self;
+    [YSStreamNetwork downloadTaskWithURl:downloadUrl progress:^(NSProgress *progress) {
+        __strong __typeof(self) strongSelf = weakSelf;
+        strongSelf.progress.progress = progress.fractionCompleted;
+    } saveFilePath:filePath completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        __strong __typeof(self) strongSelf = weakSelf;
+        if (error) {
+            strongSelf.textView.text = [NSString stringWithFormat:@"FAILURE:\n%@", error.localizedDescription];
+        } else {
+            strongSelf.textView.text = [NSString stringWithFormat:@"SUCCESS:\n%@",filePath.absoluteString];
+        }
+    }];
 }
 
 - (void)uploadHttp {
 
+    __block YSUploadObjct *uploadObj = [[YSUploadObjct alloc] init];
+    uploadObj.type = YSUploadType_Data;
+    uploadObj.params = @{@"aa": @"11", @"bb": @"22"};
+    YSUploadDataItem *dataItem = [[YSUploadDataItem alloc] init];
+    dataItem.name = @"file1";
+    dataItem.fileName = @"picture1.jpg";
+    dataItem.mimeType = @"image/jpeg";
+    UIImage *image = [UIImage imageNamed:@"picture1"];
+    NSData *jpgData = UIImageJPEGRepresentation(image, 0.82);
+    dataItem.data = jpgData;
+    YSUploadDataItem *dataItem2 = [[YSUploadDataItem alloc] init];
+    dataItem2.name = @"file2";
+    dataItem2.fileName = @"picture2.jpg";
+    dataItem2.mimeType = @"image/jpeg";
+    UIImage *image2 = [UIImage imageNamed:@"picture2"];
+    NSData *jpgData2 = UIImageJPEGRepresentation(image2, 0.82);
+    dataItem2.data = jpgData2;
+    uploadObj.dataList = @[dataItem, dataItem2];
+    __weak typeof(self) weakSelf = self;
+    [YSStreamNetwork uploadTaskWithURL:uploadUrl uploadInfo:uploadObj header:nil progress:^(NSProgress *progress) {
+        __strong __typeof(self) strongSelf = weakSelf;
+        strongSelf.progress.progress = progress.fractionCompleted;
+    } completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        __strong __typeof(self) strongSelf = weakSelf;
+        if (error) {
+            strongSelf.textView.text = [NSString stringWithFormat:@"FAILURE:\n%@",error.localizedDescription];
+        } else {
+            NSMutableDictionary *fileDesc = [NSMutableDictionary dictionary];
+            NSDictionary *fileDic = responseObject[@"files"];
+            for (NSString *key in fileDic) {
+                NSUInteger dateBytes = [fileDic[key] length];
+                [fileDesc setValue:[NSString stringWithFormat:@"%ld Bytes", dateBytes] forKey:key];
+            }
+            strongSelf.textView.text = [NSString stringWithFormat:@"success:\n%@\n%@",responseObject[@"form"], fileDesc];
+        }
+    }];
 }
 
 #pragma mark - incident
@@ -128,6 +178,7 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
 - (void)clickHttpTypeBtn:(UIButton *)btn {
 
     self.textView.text = @"loading...";
+    self.progress.progress = 0.0;
     NSInteger index = btn.tag - 9000;
     if(0 == index) {
         //get

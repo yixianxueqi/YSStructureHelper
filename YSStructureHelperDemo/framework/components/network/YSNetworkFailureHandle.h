@@ -15,6 +15,13 @@
  */
 @interface YSNetworkFailureHandle : NSObject
 
+
+/**
+ 错误转换
+ 将原生错误装换为自定义错误，利于业务处理
+ @param error 待转换错误
+ @return NSError *
+ */
 + (NSError *)handleNetworkFailure:(NSError *)error;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "YSNetWork.h"
-#import <AFNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 #import "YSNetworkFailureHandle.h"
 #import "YSNetworkCache.h"
 #import <CommonCrypto/CommonDigest.h>

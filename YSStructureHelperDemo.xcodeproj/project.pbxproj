@@ -25,6 +25,7 @@
 		DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC81FD7F1530054176E /* AppDelegate.m */; };
 		DBDC4CD31FD7F1530054176E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC91FD7F1530054176E /* Info.plist */; };
 		DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CD71FD7F38C0054176E /* AppDelegate+DefineService.m */; };
+		DBE5D75A1FE3667100BD1D71 /* YSStreamNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE5D7591FE3667100BD1D71 /* YSStreamNetwork.m */; };
 		DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF6578C1FD9129C00D9475F /* YSLogDemoViewController.m */; };
 		DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF6578F1FD91E5400D9475F /* YSLogDetailViewController.m */; };
 		DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFD7EA91FDF7E3B0037939A /* YSNetWork.m */; };
@@ -77,6 +78,8 @@
 		DBDC4CD61FD7F38C0054176E /* AppDelegate+DefineService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DefineService.h"; sourceTree = "<group>"; };
 		DBDC4CD71FD7F38C0054176E /* AppDelegate+DefineService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DefineService.m"; sourceTree = "<group>"; };
 		DBDC4CD91FD81D440054176E /* componentsServiceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = componentsServiceHeader.h; sourceTree = "<group>"; };
+		DBE5D7581FE3667100BD1D71 /* YSStreamNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSStreamNetwork.h; sourceTree = "<group>"; };
+		DBE5D7591FE3667100BD1D71 /* YSStreamNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSStreamNetwork.m; sourceTree = "<group>"; };
 		DBF657881FD90FBA00D9475F /* thirdPartHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thirdPartHeader.h; sourceTree = "<group>"; };
 		DBF657891FD9106400D9475F /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		DBF6578B1FD9129C00D9475F /* YSLogDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSLogDemoViewController.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 			children = (
 				DBFD7EA81FDF7E3B0037939A /* YSNetWork.h */,
 				DBFD7EA91FDF7E3B0037939A /* YSNetWork.m */,
+				DBE5D7581FE3667100BD1D71 /* YSStreamNetwork.h */,
+				DBE5D7591FE3667100BD1D71 /* YSStreamNetwork.m */,
 				DBB836BA1FDFD56600491251 /* YSNetworkCache.h */,
 				DBB836BB1FDFD56600491251 /* YSNetworkCache.m */,
 				DBB836BD1FE0FF9C00491251 /* YSNetworkFailureHandle.h */,
@@ -472,6 +477,7 @@
 			files = (
 				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
 				DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */,
+				DBE5D75A1FE3667100BD1D71 /* YSStreamNetwork.m in Sources */,
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
 				DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */,
 				DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */,
