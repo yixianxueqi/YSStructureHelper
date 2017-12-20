@@ -94,6 +94,14 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
  */
 - (void)setResponseAcceptableContentType:(NSString *)type;
 
+
+/**
+ 设置https请求所需证书
+
+ @param filePath 证书路径
+ */
+- (void)setHttpsCertificateWithFilePath:(NSString *)filePath;
+
 #pragma mark - http
 
 

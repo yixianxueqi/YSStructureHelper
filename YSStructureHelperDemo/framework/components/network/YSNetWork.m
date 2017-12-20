@@ -61,6 +61,22 @@ static YSNetWork *netwok;
     [self.sessionManager.responseSerializer setAcceptableContentTypes: typeSet];
 }
 
+- (void)setHttpsCertificateWithFilePath:(NSString *)filePath {
+
+    if (filePath.length <= 0) {
+        return;
+    }
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSSet *setInfo = [[NSSet alloc] initWithObjects:data, nil];
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    //是否允许无效证书，true:允许，false:不允许
+    [securityPolicy setAllowInvalidCertificates:true];
+    //是否校验域名，true:校验，false：不校验
+    securityPolicy.validatesDomainName = false;
+    [securityPolicy setPinnedCertificates:setInfo];
+    self.sessionManager.securityPolicy = securityPolicy;
+}
+
 #pragma mark - http
 
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
