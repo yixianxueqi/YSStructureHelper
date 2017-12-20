@@ -13,6 +13,8 @@
 		DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */; };
 		DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */; };
 		DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */; };
+		DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */; };
+		DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8E1FEA33BE00007F24 /* YSAppInfoDemoViewController.m */; };
 		DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BB1FDFD56600491251 /* YSNetworkCache.m */; };
 		DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BE1FE0FF9C00491251 /* YSNetworkFailureHandle.m */; };
 		DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CBF1FD7F1530054176E /* YSLogger.m */; };
@@ -58,6 +60,10 @@
 		DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSShowTipDemoViewController.m; sourceTree = "<group>"; };
 		DB55CA671FDA7B1C002911C9 /* YSNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNavViewController.h; sourceTree = "<group>"; };
 		DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNavViewController.m; sourceTree = "<group>"; };
+		DB6ABE891FEA10E800007F24 /* UIApplication+AppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppInfo.h"; sourceTree = "<group>"; };
+		DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppInfo.m"; sourceTree = "<group>"; };
+		DB6ABE8D1FEA33BE00007F24 /* YSAppInfoDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAppInfoDemoViewController.h; sourceTree = "<group>"; };
+		DB6ABE8E1FEA33BE00007F24 /* YSAppInfoDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAppInfoDemoViewController.m; sourceTree = "<group>"; };
 		DBB836BA1FDFD56600491251 /* YSNetworkCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetworkCache.h; sourceTree = "<group>"; };
 		DBB836BB1FDFD56600491251 /* YSNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetworkCache.m; sourceTree = "<group>"; };
 		DBB836BD1FE0FF9C00491251 /* YSNetworkFailureHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetworkFailureHandle.h; sourceTree = "<group>"; };
@@ -187,6 +193,24 @@
 			path = showTipVC;
 			sourceTree = "<group>";
 		};
+		DB6ABE881FEA10D100007F24 /* appInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DB6ABE891FEA10E800007F24 /* UIApplication+AppInfo.h */,
+				DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */,
+			);
+			path = appInfo;
+			sourceTree = "<group>";
+		};
+		DB6ABE8C1FEA339C00007F24 /* appInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DB6ABE8D1FEA33BE00007F24 /* YSAppInfoDemoViewController.h */,
+				DB6ABE8E1FEA33BE00007F24 /* YSAppInfoDemoViewController.m */,
+			);
+			path = appInfo;
+			sourceTree = "<group>";
+		};
 		DBDC4CB91FD7F1530054176E /* YSStructureHelperDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +240,7 @@
 		DBDC4CBC1FD7F1530054176E /* components */ = {
 			isa = PBXGroup;
 			children = (
+				DB6ABE881FEA10D100007F24 /* appInfo */,
 				DBFD7EA71FDF7E1E0037939A /* network */,
 				DBF657871FD8D5AD00D9475F /* logger */,
 			);
@@ -225,6 +250,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				DB6ABE8C1FEA339C00007F24 /* appInfo */,
 				DBFD7EAE1FDFAEDE0037939A /* network */,
 				DB33A2641FD97550004E6B74 /* showTipVC */,
 				DBF6578A1FD9126B00D9475F /* logVC */,
@@ -476,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
+				DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */,
 				DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */,
 				DBE5D75A1FE3667100BD1D71 /* YSStreamNetwork.m in Sources */,
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
@@ -491,6 +518,7 @@
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
 				DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
+				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */,
 				DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */,
 				DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */,
 			);

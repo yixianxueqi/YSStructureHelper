@@ -86,7 +86,8 @@ static NSString * const DicVCKey = @"viewController";
     if (!_vcList) {
         _vcList = @[@{DicTitleKey: @"查看日志", DicVCKey: @"YSLogDemoViewController"},
                     @{DicTitleKey: @"查看弹窗", DicVCKey: @"YSShowTipDemoViewController"},
-                    @{DicTitleKey: @"网络", DicVCKey: @"YSNetworkDemoViewController"}];
+                    @{DicTitleKey: @"网络", DicVCKey: @"YSNetworkDemoViewController"},
+                    @{DicTitleKey: @"app信息", DicVCKey: @"YSAppInfoDemoViewController"}];
     }
     return _vcList;
 }
