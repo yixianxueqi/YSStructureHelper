@@ -13,6 +13,10 @@
 		DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */; };
 		DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */; };
 		DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */; };
+		DB57B0F61FEA5CAE00D2A8CE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57B0F51FEA5CAE00D2A8CE /* UIView+Frame.m */; };
+		DB57B0F91FEA690200D2A8CE /* NSNumber+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57B0F81FEA690200D2A8CE /* NSNumber+Format.m */; };
+		DB57B0FC1FEA709D00D2A8CE /* UIDevice+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57B0FB1FEA709D00D2A8CE /* UIDevice+Info.m */; };
+		DB57B1001FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57B0FF1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m */; };
 		DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */; };
 		DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8E1FEA33BE00007F24 /* YSAppInfoDemoViewController.m */; };
 		DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BB1FDFD56600491251 /* YSNetworkCache.m */; };
@@ -60,6 +64,14 @@
 		DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSShowTipDemoViewController.m; sourceTree = "<group>"; };
 		DB55CA671FDA7B1C002911C9 /* YSNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNavViewController.h; sourceTree = "<group>"; };
 		DB55CA681FDA7B1C002911C9 /* YSNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNavViewController.m; sourceTree = "<group>"; };
+		DB57B0F41FEA5CAE00D2A8CE /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		DB57B0F51FEA5CAE00D2A8CE /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		DB57B0F71FEA690200D2A8CE /* NSNumber+Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Format.h"; sourceTree = "<group>"; };
+		DB57B0F81FEA690200D2A8CE /* NSNumber+Format.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Format.m"; sourceTree = "<group>"; };
+		DB57B0FA1FEA709D00D2A8CE /* UIDevice+Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Info.h"; sourceTree = "<group>"; };
+		DB57B0FB1FEA709D00D2A8CE /* UIDevice+Info.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Info.m"; sourceTree = "<group>"; };
+		DB57B0FE1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDeviceInfoDemoViewController.h; sourceTree = "<group>"; };
+		DB57B0FF1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSDeviceInfoDemoViewController.m; sourceTree = "<group>"; };
 		DB6ABE891FEA10E800007F24 /* UIApplication+AppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppInfo.h"; sourceTree = "<group>"; };
 		DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppInfo.m"; sourceTree = "<group>"; };
 		DB6ABE8D1FEA33BE00007F24 /* YSAppInfoDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAppInfoDemoViewController.h; sourceTree = "<group>"; };
@@ -180,6 +192,8 @@
 			children = (
 				DB33A2601FD9736C004E6B74 /* UIView+ShowTipView.h */,
 				DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */,
+				DB57B0F41FEA5CAE00D2A8CE /* UIView+Frame.h */,
+				DB57B0F51FEA5CAE00D2A8CE /* UIView+Frame.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -191,6 +205,15 @@
 				DB33A2661FD97575004E6B74 /* YSShowTipDemoViewController.m */,
 			);
 			path = showTipVC;
+			sourceTree = "<group>";
+		};
+		DB57B0FD1FEA72E000D2A8CE /* deviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DB57B0FE1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.h */,
+				DB57B0FF1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m */,
+			);
+			path = deviceInfo;
 			sourceTree = "<group>";
 		};
 		DB6ABE881FEA10D100007F24 /* appInfo */ = {
@@ -250,6 +273,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				DB57B0FD1FEA72E000D2A8CE /* deviceInfo */,
 				DB6ABE8C1FEA339C00007F24 /* appInfo */,
 				DBFD7EAE1FDFAEDE0037939A /* network */,
 				DB33A2641FD97550004E6B74 /* showTipVC */,
@@ -310,6 +334,8 @@
 			children = (
 				DB33A2631FD97374004E6B74 /* view */,
 				DB33A2531FD95E84004E6B74 /* viewController */,
+				DB57B0FA1FEA709D00D2A8CE /* UIDevice+Info.h */,
+				DB57B0FB1FEA709D00D2A8CE /* UIDevice+Info.m */,
 			);
 			path = uiCategory;
 			sourceTree = "<group>";
@@ -317,6 +343,8 @@
 		DBF657931FD9319500D9475F /* foundationCategory */ = {
 			isa = PBXGroup;
 			children = (
+				DB57B0F71FEA690200D2A8CE /* NSNumber+Format.h */,
+				DB57B0F81FEA690200D2A8CE /* NSNumber+Format.m */,
 			);
 			path = foundationCategory;
 			sourceTree = "<group>";
@@ -504,6 +532,8 @@
 				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
 				DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */,
 				DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */,
+				DB57B0FC1FEA709D00D2A8CE /* UIDevice+Info.m in Sources */,
+				DB57B0F61FEA5CAE00D2A8CE /* UIView+Frame.m in Sources */,
 				DBE5D75A1FE3667100BD1D71 /* YSStreamNetwork.m in Sources */,
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
 				DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */,
@@ -512,6 +542,8 @@
 				DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */,
 				DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */,
 				DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */,
+				DB57B0F91FEA690200D2A8CE /* NSNumber+Format.m in Sources */,
+				DB57B1001FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m in Sources */,
 				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
 				DBFD7EB11FDFAEFE0037939A /* YSNetworkDemoViewController.m in Sources */,

@@ -13,7 +13,10 @@
 #define componentsServiceHeader_h
 
 #import "YSLogger.h"
+
 #import "UIView+ShowTipView.h"
+#import "UIView+Frame.h"
+
 #import "UIApplication+NetworkStatus.h"
 
 #endif /* componentsServiceHeader_h */
