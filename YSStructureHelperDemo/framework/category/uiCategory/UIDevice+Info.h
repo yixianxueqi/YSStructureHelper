@@ -112,6 +112,13 @@
 + (CGFloat)batteryLevel;
 
 /**
+ 获取精准电池电量
+ 
+ @return CGFloat
+ */
++ (CGFloat)getCurrentBatteryLevel;
+
+/**
  获取当前设备IP
 
  @return NSString *
@@ -119,7 +126,7 @@
 + (NSString *)getDeviceIPAdress;
 
 /**
- 获取总内存大小
+ 获取总内存大小RAM
 
  @return long long
  */
@@ -134,10 +141,53 @@
 + (long long)getAvailableMemorySize;
 
 /**
- 获取精准电池电量
+ 获取当前App占用内存
 
- @return CGFloat
+ @return long long
  */
-+ (CGFloat)getCurrentBatteryLevel;
++ (long long)getCurrentAppMemorySize;
+
+/**
+ 获取存储大小ROM
+
+ @return long long
+ */
++ (long long)getTotalDiskSize;
+
+/**
+ 获取已使用存储大小
+
+ @return long long
+ */
++ (long long)getDiskUseSize;
+
+
+/**
+ 获取可使用存储大小
+
+ @return long long
+ */
++ (long long)getDiskFreeSize;
+
+/**
+ CPU可用核心数量
+
+ @return NSUInteger
+ */
++ (NSUInteger)cpuProcessorCount;
+
+/**
+ CPU使用率
+
+ @return double
+ */
++ (double)cpuUsage;
+
+/**
+ 每个核心的使用率
+
+ @return NSArray *
+ */
++ (NSArray *)cpuUsageForEachProcessor;
 
 @end
