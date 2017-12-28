@@ -69,8 +69,12 @@ YSLogger为单例对象，初始化了日志功能，YSLogFormat是对日志输�
 
 为避免继承带来的基类臃肿问题（因为在项目开发中，对基类的维护不到位，总会导致有东西就塞到基类，导致基类臃肿不堪，维护困难）,采用类别的方式为原有类进行方法扩充，也可采用关联的方式增加属性。
 
-* 提示图：
+* 提示图：UIView+ShowTipView
+
     对三方MBProgressHUD的封装，提供简便方法供业务方调用。
+* Frame：UIView+Frame
+
+	 提供常用坐标属性的快捷方法。
     
     
 ### HTTP
@@ -138,6 +142,19 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
     此处对常见网络错误进行了解析，转化为更加通俗易懂的描述。因为此处脱离了业务，所以仅仅只是示范性略大。
     可以修改此处，结合自身业务再定制为自身业务规则，使之适用于业务处理。
 
+### AppStore相关
+UIApplication+AppInfo.h
+提供三种方法：
+1. 从App Store获取app相关信息；
+2. 跳转至该app在App Store的详情页；
+3. 应用内评价或跳转至app在App Store的评价页。
+详情参见示例demo - YSAppInfoDemoViewController.h
+
+### 其它类别
+* UIDevice+Info.h
+
+	提供访问设备相关属性。例：版本号，电池电量相关，内存相关，存储相关，CPU相关等。
+	详情参见示例demo - YSDeviceInfoDemoViewController.h
 ### future
      
 
