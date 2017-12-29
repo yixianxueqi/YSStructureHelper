@@ -81,7 +81,7 @@
         }
     }];
     [uploadTask resume];
-    return nil;
+    return uploadTask;
 }
 
 @end
