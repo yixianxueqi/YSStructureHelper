@@ -23,4 +23,9 @@
  */
 - (void)listenNetworkStatus;
 
+/**
+ 启动FPS监测
+ */
+- (void)startFPSMonitor;
+
 @end

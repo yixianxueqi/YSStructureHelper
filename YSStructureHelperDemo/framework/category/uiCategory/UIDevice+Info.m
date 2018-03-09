@@ -87,8 +87,13 @@ static const NSString *key = @"KEY_UUID";
 //获取运营商信息
 + (NSString *)operatorInfo {
     
+#if TARGET_IPHONE_SIMULATOR
+    return @"模拟器没有运营商信息";
+#elif TARGET_OS_IPHONE
     CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
     return [[info subscriberCellularProvider] carrierName];
+#endif
+    
 }
 //获取电池状态
 + (UIDeviceBatteryState)batteryState {

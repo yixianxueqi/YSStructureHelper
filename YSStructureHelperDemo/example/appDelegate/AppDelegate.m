@@ -19,9 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self customVCHierachy];
     [self startLogger];
     [self listenNetworkStatus];
-    [self customVCHierachy];
+    [self startFPSMonitor];
     return YES;
 }
 

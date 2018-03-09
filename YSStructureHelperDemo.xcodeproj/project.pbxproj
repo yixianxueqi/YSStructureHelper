@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */; };
+		DB06203D20522D16004929CB /* YSFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = DB06203C20522D16004929CB /* YSFPSMonitor.m */; };
 		DB2F2B9F1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */; };
 		DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2581FD95EBA004E6B74 /* UIViewController+LifeCycle.m */; };
 		DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */; };
@@ -53,6 +54,8 @@
 /* Begin PBXFileReference section */
 		450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D5270C314DEC8986BDC241BE /* Pods-YSStructureHelperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DB06203B20522D16004929CB /* YSFPSMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSFPSMonitor.h; sourceTree = "<group>"; };
+		DB06203C20522D16004929CB /* YSFPSMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSFPSMonitor.m; sourceTree = "<group>"; };
 		DB2F2B821FD7D7E8006674E7 /* YSStructureHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSStructureHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2F2B9A1FD7D7E8006674E7 /* YSStructureHelperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YSStructureHelperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSStructureHelperDemoTests.m; sourceTree = "<group>"; };
@@ -151,6 +154,23 @@
 				ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB06203920522C80004929CB /* monitor */ = {
+			isa = PBXGroup;
+			children = (
+				DB06203A20522C92004929CB /* fps */,
+			);
+			path = monitor;
+			sourceTree = "<group>";
+		};
+		DB06203A20522C92004929CB /* fps */ = {
+			isa = PBXGroup;
+			children = (
+				DB06203B20522D16004929CB /* YSFPSMonitor.h */,
+				DB06203C20522D16004929CB /* YSFPSMonitor.m */,
+			);
+			path = fps;
 			sourceTree = "<group>";
 		};
 		DB2F2B791FD7D7E8006674E7 = {
@@ -267,6 +287,7 @@
 		DBDC4CBC1FD7F1530054176E /* components */ = {
 			isa = PBXGroup;
 			children = (
+				DB06203920522C80004929CB /* monitor */,
 				DB6ABE881FEA10D100007F24 /* appInfo */,
 				DBFD7EA71FDF7E1E0037939A /* network */,
 				DBF657871FD8D5AD00D9475F /* logger */,
@@ -559,6 +580,7 @@
 				DBFD7EB11FDFAEFE0037939A /* YSNetworkDemoViewController.m in Sources */,
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
 				DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */,
+				DB06203D20522D16004929CB /* YSFPSMonitor.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
 				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */,
 				DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */,

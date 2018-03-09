@@ -10,6 +10,7 @@
 #import "YSNavViewController.h"
 #import "ViewController.h"
 #import "YSLogger.h"
+#import "YSFPSMonitor.h"
 
 @interface AppDelegate()<YSLoggerRollFileDelegate>
 
@@ -19,8 +20,10 @@
 
 - (void)customVCHierachy {
 
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     YSNavViewController *navVC = [[YSNavViewController alloc] initWithRootViewController:[[ViewController alloc] init]];
-    [UIApplication sharedApplication].keyWindow.rootViewController = navVC;
+    self.window.rootViewController = navVC;
+    [self.window makeKeyAndVisible];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 }
 
@@ -40,6 +43,11 @@
 #pragma mark - network status
 - (void)listenNetworkStatus {
     [[UIApplication sharedApplication] startListenNetworkStatus];
+}
+
+- (void)startFPSMonitor {
+    
+    [[YSFPSMonitor defaultFPSMonitor] start];
 }
 
 @end
