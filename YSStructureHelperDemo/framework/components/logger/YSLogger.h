@@ -22,7 +22,7 @@
 
 /*
  *  默认调式模式 是DDLogLevelVerbose级别
- *     开发模式 是DDLogLevelInfo级别
+ *     发布模式 是DDLogLevelInfo级别
  */
 #ifdef DEBUG
 static const int ddLogLevel = DDLogLevelVerbose;

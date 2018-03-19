@@ -19,4 +19,6 @@
 
 #import "UIApplication+NetworkStatus.h"
 
+#import "YSDefineFunc.h"
+
 #endif /* componentsServiceHeader_h */

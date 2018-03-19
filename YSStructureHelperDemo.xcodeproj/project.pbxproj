@@ -20,6 +20,9 @@
 		DB57B1001FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57B0FF1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m */; };
 		DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */; };
 		DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8E1FEA33BE00007F24 /* YSAppInfoDemoViewController.m */; };
+		DB71FEFC205FA71F00FB14FE /* YSTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71FEFB205FA71F00FB14FE /* YSTestModel.m */; };
+		DB71FF05205FB08F00FB14FE /* YSDefineFuncDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71FF04205FB08F00FB14FE /* YSDefineFuncDemoViewController.m */; };
+		DB71FF08205FBE0B00FB14FE /* NSFileManager+FileAssist.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71FF07205FBE0B00FB14FE /* NSFileManager+FileAssist.m */; };
 		DB9D4D171FF4C1F400BAA9FA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9D4D161FF4C1F400BAA9FA /* StoreKit.framework */; };
 		DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BB1FDFD56600491251 /* YSNetworkCache.m */; };
 		DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BE1FE0FF9C00491251 /* YSNetworkFailureHandle.m */; };
@@ -80,6 +83,13 @@
 		DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppInfo.m"; sourceTree = "<group>"; };
 		DB6ABE8D1FEA33BE00007F24 /* YSAppInfoDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAppInfoDemoViewController.h; sourceTree = "<group>"; };
 		DB6ABE8E1FEA33BE00007F24 /* YSAppInfoDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAppInfoDemoViewController.m; sourceTree = "<group>"; };
+		DB71FEFA205FA71F00FB14FE /* YSTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTestModel.h; sourceTree = "<group>"; };
+		DB71FEFB205FA71F00FB14FE /* YSTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTestModel.m; sourceTree = "<group>"; };
+		DB71FF01205FAEF500FB14FE /* YSDefineFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDefineFunc.h; sourceTree = "<group>"; };
+		DB71FF03205FB08F00FB14FE /* YSDefineFuncDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDefineFuncDemoViewController.h; sourceTree = "<group>"; };
+		DB71FF04205FB08F00FB14FE /* YSDefineFuncDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSDefineFuncDemoViewController.m; sourceTree = "<group>"; };
+		DB71FF06205FBE0B00FB14FE /* NSFileManager+FileAssist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+FileAssist.h"; sourceTree = "<group>"; };
+		DB71FF07205FBE0B00FB14FE /* NSFileManager+FileAssist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+FileAssist.m"; sourceTree = "<group>"; };
 		DB9D4D161FF4C1F400BAA9FA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DBB836BA1FDFD56600491251 /* YSNetworkCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetworkCache.h; sourceTree = "<group>"; };
 		DBB836BB1FDFD56600491251 /* YSNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetworkCache.m; sourceTree = "<group>"; };
@@ -258,6 +268,33 @@
 			path = appInfo;
 			sourceTree = "<group>";
 		};
+		DB71FEF9205FA70C00FB14FE /* definefunc */ = {
+			isa = PBXGroup;
+			children = (
+				DB71FF02205FB07100FB14FE /* model */,
+				DB71FF03205FB08F00FB14FE /* YSDefineFuncDemoViewController.h */,
+				DB71FF04205FB08F00FB14FE /* YSDefineFuncDemoViewController.m */,
+			);
+			path = definefunc;
+			sourceTree = "<group>";
+		};
+		DB71FF00205FAEC500FB14FE /* defineFunc */ = {
+			isa = PBXGroup;
+			children = (
+				DB71FF01205FAEF500FB14FE /* YSDefineFunc.h */,
+			);
+			path = defineFunc;
+			sourceTree = "<group>";
+		};
+		DB71FF02205FB07100FB14FE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DB71FEFA205FA71F00FB14FE /* YSTestModel.h */,
+				DB71FEFB205FA71F00FB14FE /* YSTestModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		DBDC4CB91FD7F1530054176E /* YSStructureHelperDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +314,7 @@
 		DBDC4CBB1FD7F1530054176E /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				DB71FF00205FAEC500FB14FE /* defineFunc */,
 				DBDC4CD91FD81D440054176E /* componentsServiceHeader.h */,
 				DBF657911FD9314B00D9475F /* category */,
 				DBDC4CBC1FD7F1530054176E /* components */,
@@ -298,6 +336,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				DB71FEF9205FA70C00FB14FE /* definefunc */,
 				DB57B0FD1FEA72E000D2A8CE /* deviceInfo */,
 				DB6ABE8C1FEA339C00007F24 /* appInfo */,
 				DBFD7EAE1FDFAEDE0037939A /* network */,
@@ -370,6 +409,8 @@
 			children = (
 				DB57B0F71FEA690200D2A8CE /* NSNumber+Format.h */,
 				DB57B0F81FEA690200D2A8CE /* NSNumber+Format.m */,
+				DB71FF06205FBE0B00FB14FE /* NSFileManager+FileAssist.h */,
+				DB71FF07205FBE0B00FB14FE /* NSFileManager+FileAssist.m */,
 			);
 			path = foundationCategory;
 			sourceTree = "<group>";
@@ -568,8 +609,10 @@
 				DBE5D75A1FE3667100BD1D71 /* YSStreamNetwork.m in Sources */,
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
 				DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */,
+				DB71FEFC205FA71F00FB14FE /* YSTestModel.m in Sources */,
 				DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */,
 				DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */,
+				DB71FF08205FBE0B00FB14FE /* NSFileManager+FileAssist.m in Sources */,
 				DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */,
 				DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */,
 				DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */,
@@ -584,6 +627,7 @@
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
 				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */,
 				DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */,
+				DB71FF05205FB08F00FB14FE /* YSDefineFuncDemoViewController.m in Sources */,
 				DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
