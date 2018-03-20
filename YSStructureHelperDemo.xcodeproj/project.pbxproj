@@ -26,6 +26,10 @@
 		DB9D4D171FF4C1F400BAA9FA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9D4D161FF4C1F400BAA9FA /* StoreKit.framework */; };
 		DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BB1FDFD56600491251 /* YSNetworkCache.m */; };
 		DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB836BE1FE0FF9C00491251 /* YSNetworkFailureHandle.m */; };
+		DBC51E362060F573005E0EC2 /* YSDefauleTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC51E352060F573005E0EC2 /* YSDefauleTextFieldDelegate.m */; };
+		DBC51E3A2060F954005E0EC2 /* YSInputDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC51E392060F954005E0EC2 /* YSInputDemoViewController.m */; };
+		DBC51E3F2060FD47005E0EC2 /* YSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC51E3E2060FD47005E0EC2 /* YSTextView.m */; };
+		DBC51E432061080A005E0EC2 /* YSDefaultTextViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC51E422061080A005E0EC2 /* YSDefaultTextViewDelegate.m */; };
 		DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CBF1FD7F1530054176E /* YSLogger.m */; };
 		DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC01FD7F1530054176E /* YSLogFormat.m */; };
 		DBDC4CCD1FD7F1530054176E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC11FD7F1530054176E /* Assets.xcassets */; };
@@ -95,6 +99,14 @@
 		DBB836BB1FDFD56600491251 /* YSNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetworkCache.m; sourceTree = "<group>"; };
 		DBB836BD1FE0FF9C00491251 /* YSNetworkFailureHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetworkFailureHandle.h; sourceTree = "<group>"; };
 		DBB836BE1FE0FF9C00491251 /* YSNetworkFailureHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetworkFailureHandle.m; sourceTree = "<group>"; };
+		DBC51E342060F573005E0EC2 /* YSDefauleTextFieldDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDefauleTextFieldDelegate.h; sourceTree = "<group>"; };
+		DBC51E352060F573005E0EC2 /* YSDefauleTextFieldDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSDefauleTextFieldDelegate.m; sourceTree = "<group>"; };
+		DBC51E382060F954005E0EC2 /* YSInputDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSInputDemoViewController.h; sourceTree = "<group>"; };
+		DBC51E392060F954005E0EC2 /* YSInputDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSInputDemoViewController.m; sourceTree = "<group>"; };
+		DBC51E3D2060FD47005E0EC2 /* YSTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTextView.h; sourceTree = "<group>"; };
+		DBC51E3E2060FD47005E0EC2 /* YSTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTextView.m; sourceTree = "<group>"; };
+		DBC51E412061080A005E0EC2 /* YSDefaultTextViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDefaultTextViewDelegate.h; sourceTree = "<group>"; };
+		DBC51E422061080A005E0EC2 /* YSDefaultTextViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSDefaultTextViewDelegate.m; sourceTree = "<group>"; };
 		DBDC4CBA1FD7F1530054176E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBDC4CBD1FD7F1530054176E /* YSLogFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogFormat.h; sourceTree = "<group>"; };
 		DBDC4CBE1FD7F1530054176E /* YSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogger.h; sourceTree = "<group>"; };
@@ -295,6 +307,52 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		DBC51E332060F547005E0EC2 /* textFieldDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DBC51E342060F573005E0EC2 /* YSDefauleTextFieldDelegate.h */,
+				DBC51E352060F573005E0EC2 /* YSDefauleTextFieldDelegate.m */,
+			);
+			path = textFieldDelegate;
+			sourceTree = "<group>";
+		};
+		DBC51E372060F92D005E0EC2 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				DBC51E382060F954005E0EC2 /* YSInputDemoViewController.h */,
+				DBC51E392060F954005E0EC2 /* YSInputDemoViewController.m */,
+			);
+			path = input;
+			sourceTree = "<group>";
+		};
+		DBC51E3B2060FD16005E0EC2 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				DBC51E40206107B5005E0EC2 /* textViewDelegate */,
+				DBC51E3C2060FD2C005E0EC2 /* textView */,
+				DBC51E332060F547005E0EC2 /* textFieldDelegate */,
+			);
+			path = input;
+			sourceTree = "<group>";
+		};
+		DBC51E3C2060FD2C005E0EC2 /* textView */ = {
+			isa = PBXGroup;
+			children = (
+				DBC51E3D2060FD47005E0EC2 /* YSTextView.h */,
+				DBC51E3E2060FD47005E0EC2 /* YSTextView.m */,
+			);
+			path = textView;
+			sourceTree = "<group>";
+		};
+		DBC51E40206107B5005E0EC2 /* textViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DBC51E412061080A005E0EC2 /* YSDefaultTextViewDelegate.h */,
+				DBC51E422061080A005E0EC2 /* YSDefaultTextViewDelegate.m */,
+			);
+			path = textViewDelegate;
+			sourceTree = "<group>";
+		};
 		DBDC4CB91FD7F1530054176E /* YSStructureHelperDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +383,7 @@
 		DBDC4CBC1FD7F1530054176E /* components */ = {
 			isa = PBXGroup;
 			children = (
+				DBC51E3B2060FD16005E0EC2 /* input */,
 				DB06203920522C80004929CB /* monitor */,
 				DB6ABE881FEA10D100007F24 /* appInfo */,
 				DBFD7EA71FDF7E1E0037939A /* network */,
@@ -336,6 +395,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				DBC51E372060F92D005E0EC2 /* input */,
 				DB71FEF9205FA70C00FB14FE /* definefunc */,
 				DB57B0FD1FEA72E000D2A8CE /* deviceInfo */,
 				DB6ABE8C1FEA339C00007F24 /* appInfo */,
@@ -603,12 +663,15 @@
 			files = (
 				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
 				DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */,
+				DBC51E432061080A005E0EC2 /* YSDefaultTextViewDelegate.m in Sources */,
+				DBC51E3A2060F954005E0EC2 /* YSInputDemoViewController.m in Sources */,
 				DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */,
 				DB57B0FC1FEA709D00D2A8CE /* UIDevice+Info.m in Sources */,
 				DB57B0F61FEA5CAE00D2A8CE /* UIView+Frame.m in Sources */,
 				DBE5D75A1FE3667100BD1D71 /* YSStreamNetwork.m in Sources */,
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
 				DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */,
+				DBC51E362060F573005E0EC2 /* YSDefauleTextFieldDelegate.m in Sources */,
 				DB71FEFC205FA71F00FB14FE /* YSTestModel.m in Sources */,
 				DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */,
 				DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */,
@@ -624,6 +687,7 @@
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
 				DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */,
 				DB06203D20522D16004929CB /* YSFPSMonitor.m in Sources */,
+				DBC51E3F2060FD47005E0EC2 /* YSTextView.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
 				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */,
 				DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */,
