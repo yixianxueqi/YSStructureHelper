@@ -30,7 +30,7 @@
     return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
 }
 //tmp路径
-+ (NSString *)tempPath {
++ (NSString *)tmpPath {
     
     return NSTemporaryDirectory();
 }
@@ -39,4 +39,74 @@
     return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
 };
 
+- (BOOL)fileIsExistAtPath:(NSString *)path andNullCreate:(BOOL)isCreate {
+    
+    BOOL flag = [self fileExistsAtPath:path];
+    if (flag) {
+        return flag;
+    } else {
+        if (isCreate) {
+            [self createFileAtPath:path contents:nil attributes:nil];
+        }
+        return false;
+    }
+}
+
+- (BOOL)directoryIsExistAtPath:(NSString *)path andNullCreate:(BOOL)isCreate {
+    
+    BOOL isDir;
+    BOOL flag = [self fileExistsAtPath:path isDirectory:&isDir];
+    if (flag && isDir) {
+        return flag;
+    } else {
+        if (isCreate) {
+            [self createDirectoryAtPath:path withIntermediateDirectories:true attributes:nil error:nil];            
+        }
+        return false;
+    }
+}
+
+- (double)sizeOfFileAtPath:(NSString *)path {
+    
+    if ([self fileExistsAtPath:path]) {
+        return [[self attributesOfItemAtPath:path error:nil] fileSize];
+    }
+    return -1;
+}
+
+- (double)sizeOfDirectoryAtPath:(NSString *)path {
+    
+    if ([self directoryIsExistAtPath:path andNullCreate:false]) {
+        long long folderSize = 0;
+        NSArray *items = [self contentsOfDirectoryAtPath:path error:nil];
+        for (NSString *fileName in items) {
+            @autoreleasepool{
+                NSString *subPath = [path stringByAppendingPathComponent:fileName];
+                if ([self directoryIsExistAtPath:subPath andNullCreate:false]) {
+                    folderSize += [self sizeOfDirectoryAtPath:subPath];
+                } else {
+                    folderSize += [self sizeOfFileAtPath:subPath];
+                }
+            }
+        }
+        return folderSize;
+    }
+    return -1;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

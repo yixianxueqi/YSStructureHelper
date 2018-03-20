@@ -24,8 +24,62 @@
 //Library路径
 + (NSString *)libraryPath;
 //tmp路径
-+ (NSString *)tempPath;
++ (NSString *)tmpPath;
 //Caches路径
 + (NSString *)cachesPath;
 
+/*
+ 文件操作相关
+ */
+
+/**
+ 判断文件是否存在，返回True/False, isCreate标识当不存在时，是否创建。
+
+ @param path 文件路径
+ @param isCreate 是否创建
+ @return 是否存在
+ */
+- (BOOL)fileIsExistAtPath:(NSString *)path andNullCreate:(BOOL)isCreate;
+
+/**
+ 判断目录是否存在，返回True/False, isCreate标识当不存在时，是否创建。
+
+ @param path 目录路径
+ @param isCreate 是否创建
+ @return 是否存在
+ */
+- (BOOL)directoryIsExistAtPath:(NSString *)path andNullCreate:(BOOL)isCreate;
+
+/**
+ 获取文件大小，文件若不存在则返回-1。
+
+ @param path 文件路径
+ @return 字节大小 Byte
+ */
+- (double)sizeOfFileAtPath:(NSString *)path;
+
+/**
+ 获取目录大小，目录若不存在则返回-1。
+
+ @param path 目录路径
+ @return 字节大小 Byte
+ */
+- (double)sizeOfDirectoryAtPath:(NSString *)path;
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
