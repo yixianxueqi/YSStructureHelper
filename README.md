@@ -155,6 +155,38 @@ UIApplication+AppInfo.h
 
 	提供访问设备相关属性。例：版本号，电池电量相关，内存相关，存储相关，CPU相关等。
 	详情参见示例demo - YSDeviceInfoDemoViewController.h
+	
+* NSNumber+Format.h
+	
+	提供数据格式化描述。
+	
+* NSFileManager+FileAssist.h
+
+	提供偏好文件读写，沙盒目录快速获取以及简单文件操作相关。
+	
+### 宏函数
+
+* YSDefineFunc.h
+	
+	trash(obj)：异步子线程销毁对象；
+	weakObj(obj)/strongObj(obj)：强弱引用对象；
+	RGBAColor(r,g,b,a)：三原色颜色；
+	XColor(rgbValue,a)：16进制颜色；
+
+### 输入
+
+* YSTextView.h
+
+	UITextView子类，实现类似textfield的提示文字效果。
+	
+* YSDefaultTextViewDelegate.h
+
+	UITextViewDelegate协议的实现对象，可设置正则校验、最大数量，以及获取输入回调；用来对输入内容的校验。
+
+* YSDefauleTextFieldDelegate.h
+	
+	UITextFieldDelegate协议的实现对象，可设置正则校验、最大数量，以及获取输入回调；用来对输入内容的校验。
+	
 ### future
      
 
