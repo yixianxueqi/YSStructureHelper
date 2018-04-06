@@ -13,6 +13,7 @@
 + (void)userPlistStoreValue:(id)value withKey:(NSString *)key {
     
     [[NSUserDefaults standardUserDefaults] setValue:value forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (id)userPlistGetValueByKey:(NSString *)key {
