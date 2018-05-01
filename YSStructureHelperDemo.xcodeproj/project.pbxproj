@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */; };
 		DB06203D20522D16004929CB /* YSFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = DB06203C20522D16004929CB /* YSFPSMonitor.m */; };
+		DB2BFB582098384F00A0EBCC /* UIButton+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BFB572098384F00A0EBCC /* UIButton+Touch.m */; };
+		DB2BFB5B2098386300A0EBCC /* UIImage+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BFB5A2098386300A0EBCC /* UIImage+Create.m */; };
+		DB2BFB5F20983F1D00A0EBCC /* YSImageDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BFB5E20983F1D00A0EBCC /* YSImageDemoViewController.m */; };
 		DB2F2B9F1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */; };
 		DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2581FD95EBA004E6B74 /* UIViewController+LifeCycle.m */; };
 		DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */; };
@@ -63,6 +66,12 @@
 		D5270C314DEC8986BDC241BE /* Pods-YSStructureHelperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DB06203B20522D16004929CB /* YSFPSMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSFPSMonitor.h; sourceTree = "<group>"; };
 		DB06203C20522D16004929CB /* YSFPSMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSFPSMonitor.m; sourceTree = "<group>"; };
+		DB2BFB562098384F00A0EBCC /* UIButton+Touch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Touch.h"; sourceTree = "<group>"; };
+		DB2BFB572098384F00A0EBCC /* UIButton+Touch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Touch.m"; sourceTree = "<group>"; };
+		DB2BFB592098386300A0EBCC /* UIImage+Create.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Create.h"; sourceTree = "<group>"; };
+		DB2BFB5A2098386300A0EBCC /* UIImage+Create.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Create.m"; sourceTree = "<group>"; };
+		DB2BFB5D20983F1D00A0EBCC /* YSImageDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSImageDemoViewController.h; sourceTree = "<group>"; };
+		DB2BFB5E20983F1D00A0EBCC /* YSImageDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSImageDemoViewController.m; sourceTree = "<group>"; };
 		DB2F2B821FD7D7E8006674E7 /* YSStructureHelperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSStructureHelperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2F2B9A1FD7D7E8006674E7 /* YSStructureHelperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YSStructureHelperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2F2B9E1FD7D7E8006674E7 /* YSStructureHelperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSStructureHelperDemoTests.m; sourceTree = "<group>"; };
@@ -195,6 +204,15 @@
 			path = fps;
 			sourceTree = "<group>";
 		};
+		DB2BFB5C20983EF300A0EBCC /* image */ = {
+			isa = PBXGroup;
+			children = (
+				DB2BFB5D20983F1D00A0EBCC /* YSImageDemoViewController.h */,
+				DB2BFB5E20983F1D00A0EBCC /* YSImageDemoViewController.m */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		DB2F2B791FD7D7E8006674E7 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +258,10 @@
 				DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */,
 				DB57B0F41FEA5CAE00D2A8CE /* UIView+Frame.h */,
 				DB57B0F51FEA5CAE00D2A8CE /* UIView+Frame.m */,
+				DB2BFB562098384F00A0EBCC /* UIButton+Touch.h */,
+				DB2BFB572098384F00A0EBCC /* UIButton+Touch.m */,
+				DB2BFB592098386300A0EBCC /* UIImage+Create.h */,
+				DB2BFB5A2098386300A0EBCC /* UIImage+Create.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -395,6 +417,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				DB2BFB5C20983EF300A0EBCC /* image */,
 				DBC51E372060F92D005E0EC2 /* input */,
 				DB71FEF9205FA70C00FB14FE /* definefunc */,
 				DB57B0FD1FEA72E000D2A8CE /* deviceInfo */,
@@ -666,6 +689,7 @@
 				DBC51E432061080A005E0EC2 /* YSDefaultTextViewDelegate.m in Sources */,
 				DBC51E3A2060F954005E0EC2 /* YSInputDemoViewController.m in Sources */,
 				DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */,
+				DB2BFB5B2098386300A0EBCC /* UIImage+Create.m in Sources */,
 				DB57B0FC1FEA709D00D2A8CE /* UIDevice+Info.m in Sources */,
 				DB57B0F61FEA5CAE00D2A8CE /* UIView+Frame.m in Sources */,
 				DBE5D75A1FE3667100BD1D71 /* YSStreamNetwork.m in Sources */,
@@ -677,6 +701,7 @@
 				DBB836BC1FDFD56600491251 /* YSNetworkCache.m in Sources */,
 				DB71FF08205FBE0B00FB14FE /* NSFileManager+FileAssist.m in Sources */,
 				DB33A2591FD95EBA004E6B74 /* UIViewController+LifeCycle.m in Sources */,
+				DB2BFB5F20983F1D00A0EBCC /* YSImageDemoViewController.m in Sources */,
 				DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */,
 				DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */,
 				DB57B0F91FEA690200D2A8CE /* NSNumber+Format.m in Sources */,
@@ -687,6 +712,7 @@
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,
 				DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */,
 				DB06203D20522D16004929CB /* YSFPSMonitor.m in Sources */,
+				DB2BFB582098384F00A0EBCC /* UIButton+Touch.m in Sources */,
 				DBC51E3F2060FD47005E0EC2 /* YSTextView.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
 				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */,

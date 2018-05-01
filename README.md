@@ -164,6 +164,15 @@ UIApplication+AppInfo.h
 
 	提供偏好文件读写，沙盒目录快速获取以及简单文件操作相关。
 	
+* UIButton+Touch.h
+
+	调整按钮点击区域。
+	
+* UIImage+Create.h
+
+	通过颜色、view、layer生成图片。
+	
+	
 ### 宏函数
 
 * YSDefineFunc.h
