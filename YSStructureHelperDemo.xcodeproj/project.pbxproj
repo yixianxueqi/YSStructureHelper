@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6EEF441209B03C800EC8350 /* UIImage+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF440209B03C800EC8350 /* UIImage+CornerRadius.m */; };
+		A6EEF449209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF448209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m */; };
 		D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */; };
 		DB06203D20522D16004929CB /* YSFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = DB06203C20522D16004929CB /* YSFPSMonitor.m */; };
 		DB2BFB582098384F00A0EBCC /* UIButton+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BFB572098384F00A0EBCC /* UIButton+Touch.m */; };
@@ -63,6 +65,10 @@
 
 /* Begin PBXFileReference section */
 		450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A6EEF43F209B03C800EC8350 /* UIImage+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CornerRadius.h"; sourceTree = "<group>"; };
+		A6EEF440209B03C800EC8350 /* UIImage+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CornerRadius.m"; sourceTree = "<group>"; };
+		A6EEF447209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSCornerRadiusDemoViewController.h; sourceTree = "<group>"; };
+		A6EEF448209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSCornerRadiusDemoViewController.m; sourceTree = "<group>"; };
 		D5270C314DEC8986BDC241BE /* Pods-YSStructureHelperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DB06203B20522D16004929CB /* YSFPSMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSFPSMonitor.h; sourceTree = "<group>"; };
 		DB06203C20522D16004929CB /* YSFPSMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSFPSMonitor.m; sourceTree = "<group>"; };
@@ -178,6 +184,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A6EEF443209B03D900EC8350 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				DB2BFB592098386300A0EBCC /* UIImage+Create.h */,
+				DB2BFB5A2098386300A0EBCC /* UIImage+Create.m */,
+				A6EEF43F209B03C800EC8350 /* UIImage+CornerRadius.h */,
+				A6EEF440209B03C800EC8350 /* UIImage+CornerRadius.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		A6EEF445209B03EB00EC8350 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				DB33A2601FD9736C004E6B74 /* UIView+ShowTipView.h */,
+				DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */,
+				DB57B0F41FEA5CAE00D2A8CE /* UIView+Frame.h */,
+				DB57B0F51FEA5CAE00D2A8CE /* UIView+Frame.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		A6EEF446209B09EF00EC8350 /* cornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				A6EEF447209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.h */,
+				A6EEF448209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m */,
+			);
+			path = cornerRadius;
+			sourceTree = "<group>";
+		};
 		CB53FE5AA3F0E848455610F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,14 +291,10 @@
 		DB33A2631FD97374004E6B74 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				DB33A2601FD9736C004E6B74 /* UIView+ShowTipView.h */,
-				DB33A2611FD9736C004E6B74 /* UIView+ShowTipView.m */,
-				DB57B0F41FEA5CAE00D2A8CE /* UIView+Frame.h */,
-				DB57B0F51FEA5CAE00D2A8CE /* UIView+Frame.m */,
+				A6EEF445209B03EB00EC8350 /* UIView */,
 				DB2BFB562098384F00A0EBCC /* UIButton+Touch.h */,
 				DB2BFB572098384F00A0EBCC /* UIButton+Touch.m */,
-				DB2BFB592098386300A0EBCC /* UIImage+Create.h */,
-				DB2BFB5A2098386300A0EBCC /* UIImage+Create.m */,
+				A6EEF443209B03D900EC8350 /* UIImage */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -417,6 +450,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				A6EEF446209B09EF00EC8350 /* cornerRadius */,
 				DB2BFB5C20983EF300A0EBCC /* image */,
 				DBC51E372060F92D005E0EC2 /* input */,
 				DB71FEF9205FA70C00FB14FE /* definefunc */,
@@ -535,7 +569,6 @@
 				DB2F2B7E1FD7D7E8006674E7 /* Sources */,
 				DB2F2B7F1FD7D7E8006674E7 /* Frameworks */,
 				DB2F2B801FD7D7E8006674E7 /* Resources */,
-				80ACC73523B9512B261B42C8 /* [CP] Embed Pods Frameworks */,
 				903465BF746D29985639E78F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -626,21 +659,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		80ACC73523B9512B261B42C8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		903465BF746D29985639E78F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,7 +670,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -690,6 +708,7 @@
 				DBC51E3A2060F954005E0EC2 /* YSInputDemoViewController.m in Sources */,
 				DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */,
 				DB2BFB5B2098386300A0EBCC /* UIImage+Create.m in Sources */,
+				A6EEF441209B03C800EC8350 /* UIImage+CornerRadius.m in Sources */,
 				DB57B0FC1FEA709D00D2A8CE /* UIDevice+Info.m in Sources */,
 				DB57B0F61FEA5CAE00D2A8CE /* UIView+Frame.m in Sources */,
 				DBE5D75A1FE3667100BD1D71 /* YSStreamNetwork.m in Sources */,
@@ -713,6 +732,7 @@
 				DB55CA691FDA7B1C002911C9 /* YSNavViewController.m in Sources */,
 				DB06203D20522D16004929CB /* YSFPSMonitor.m in Sources */,
 				DB2BFB582098384F00A0EBCC /* UIButton+Touch.m in Sources */,
+				A6EEF449209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m in Sources */,
 				DBC51E3F2060FD47005E0EC2 /* YSTextView.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
 				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */,
