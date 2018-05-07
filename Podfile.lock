@@ -41,17 +41,6 @@ DEPENDENCIES:
   - Reachability (= 3.2)
   - YYKit (= 1.0.9)
 
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
-    - Aspects
-    - CocoaLumberjack
-    - IQKeyboardManager
-    - Masonry
-    - MBProgressHUD
-    - Reachability
-    - YYKit
-
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
@@ -64,4 +53,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d955aec64a6268b85e94f2df843fd4352484dda7
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0

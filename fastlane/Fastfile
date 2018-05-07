@@ -1,0 +1,48 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+	before_all do
+		cocoapods
+	end
+
+	lane :alpha do
+		desc "package ad-hoc"
+		sigh(output_path: "build",
+			 adhoc: true)
+		build_app(scheme: "YSStructureHelperDemo",
+            workspace: "YSStructureHelperDemo.xcworkspace",
+            include_bitcode: false,
+            export_method: "ad-hoc",
+            output_directory: "build",
+            configuration: "Debug")
+	end
+
+	lane :release do
+		desc "package appStore"
+		sigh(output_path: "build")
+		build_app(scheme: "YSStructureHelperDemo",
+            workspace: "YSStructureHelperDemo.xcworkspace",
+            include_bitcode: false,
+            export_method: "appstore",
+            output_directory: "build",
+            configuration: "Release")
+	end
+
+end
+

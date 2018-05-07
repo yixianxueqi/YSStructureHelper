@@ -570,6 +570,7 @@
 				DB2F2B7F1FD7D7E8006674E7 /* Frameworks */,
 				DB2F2B801FD7D7E8006674E7 /* Resources */,
 				903465BF746D29985639E78F /* [CP] Copy Pods Resources */,
+				776D9600175EF1BB233E3A61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -659,6 +660,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		776D9600175EF1BB233E3A61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		903465BF746D29985639E78F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
