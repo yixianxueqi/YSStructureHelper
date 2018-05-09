@@ -44,5 +44,14 @@ platform :ios do
             configuration: "Release")
 	end
 
+	lane :upload do
+		desc "上传至蒲公英"
+		pgyer(api_key: "xxxxx",
+			user_key: "xxxxx",
+			update_description: "fastlane自动打包上传测试",
+			password: "xxxx",
+			install_type: "2",
+			ipa: "./build/YSStructureHelperDemo.ipa")
+
 end
 
