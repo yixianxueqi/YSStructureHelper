@@ -14,7 +14,11 @@
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     
     NSMutableString *str = [NSMutableString stringWithString:textView.text];
-    [str insertString:text atIndex:range.location];
+    if (text.length == 0) {
+        [str replaceCharactersInRange:range withString:text];
+    } else {
+        [str insertString:text atIndex:range.location];
+    }
     if (self.rule.length > 0) {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.rule];
         return [predicate evaluateWithObject: str];

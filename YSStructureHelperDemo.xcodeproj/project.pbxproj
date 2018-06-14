@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6D2B63420BB9AD300F382DE /* YSDefaultTextViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2B63220BB9AD300F382DE /* YSDefaultTextViewDelegate.m */; };
 		A6EEF441209B03C800EC8350 /* UIImage+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF440209B03C800EC8350 /* UIImage+CornerRadius.m */; };
 		A6EEF449209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF448209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m */; };
 		D4CEBF2EB524E6763FE58D1D /* libPods-YSStructureHelperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15FB0F62FC946900FADF5D /* libPods-YSStructureHelperDemo.a */; };
@@ -34,7 +35,6 @@
 		DBC51E362060F573005E0EC2 /* YSDefauleTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC51E352060F573005E0EC2 /* YSDefauleTextFieldDelegate.m */; };
 		DBC51E3A2060F954005E0EC2 /* YSInputDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC51E392060F954005E0EC2 /* YSInputDemoViewController.m */; };
 		DBC51E3F2060FD47005E0EC2 /* YSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC51E3E2060FD47005E0EC2 /* YSTextView.m */; };
-		DBC51E432061080A005E0EC2 /* YSDefaultTextViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC51E422061080A005E0EC2 /* YSDefaultTextViewDelegate.m */; };
 		DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CBF1FD7F1530054176E /* YSLogger.m */; };
 		DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC4CC01FD7F1530054176E /* YSLogFormat.m */; };
 		DBDC4CCD1FD7F1530054176E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDC4CC11FD7F1530054176E /* Assets.xcassets */; };
@@ -65,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A6D2B63220BB9AD300F382DE /* YSDefaultTextViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDefaultTextViewDelegate.m; sourceTree = "<group>"; };
+		A6D2B63320BB9AD300F382DE /* YSDefaultTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDefaultTextViewDelegate.h; sourceTree = "<group>"; };
 		A6EEF43F209B03C800EC8350 /* UIImage+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CornerRadius.h"; sourceTree = "<group>"; };
 		A6EEF440209B03C800EC8350 /* UIImage+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CornerRadius.m"; sourceTree = "<group>"; };
 		A6EEF447209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSCornerRadiusDemoViewController.h; sourceTree = "<group>"; };
@@ -120,8 +122,6 @@
 		DBC51E392060F954005E0EC2 /* YSInputDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSInputDemoViewController.m; sourceTree = "<group>"; };
 		DBC51E3D2060FD47005E0EC2 /* YSTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTextView.h; sourceTree = "<group>"; };
 		DBC51E3E2060FD47005E0EC2 /* YSTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTextView.m; sourceTree = "<group>"; };
-		DBC51E412061080A005E0EC2 /* YSDefaultTextViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDefaultTextViewDelegate.h; sourceTree = "<group>"; };
-		DBC51E422061080A005E0EC2 /* YSDefaultTextViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSDefaultTextViewDelegate.m; sourceTree = "<group>"; };
 		DBDC4CBA1FD7F1530054176E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBDC4CBD1FD7F1530054176E /* YSLogFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogFormat.h; sourceTree = "<group>"; };
 		DBDC4CBE1FD7F1530054176E /* YSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLogger.h; sourceTree = "<group>"; };
@@ -402,8 +402,8 @@
 		DBC51E40206107B5005E0EC2 /* textViewDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				DBC51E412061080A005E0EC2 /* YSDefaultTextViewDelegate.h */,
-				DBC51E422061080A005E0EC2 /* YSDefaultTextViewDelegate.m */,
+				A6D2B63320BB9AD300F382DE /* YSDefaultTextViewDelegate.h */,
+				A6D2B63220BB9AD300F382DE /* YSDefaultTextViewDelegate.m */,
 			);
 			path = textViewDelegate;
 			sourceTree = "<group>";
@@ -718,9 +718,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D2B63420BB9AD300F382DE /* YSDefaultTextViewDelegate.m in Sources */,
 				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
 				DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */,
-				DBC51E432061080A005E0EC2 /* YSDefaultTextViewDelegate.m in Sources */,
 				DBC51E3A2060F954005E0EC2 /* YSInputDemoViewController.m in Sources */,
 				DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */,
 				DB2BFB5B2098386300A0EBCC /* UIImage+Create.m in Sources */,

@@ -19,7 +19,11 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
     NSMutableString *str = [NSMutableString stringWithString:textField.text];
-    [str insertString:string atIndex:range.location];
+    if (string.length == 0) {
+        [str replaceCharactersInRange:range withString:string];
+    } else {
+        [str insertString:string atIndex:range.location];
+    }
     if (self.rule.length > 0) {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.rule];
         BOOL flag = [predicate evaluateWithObject: str];
@@ -35,6 +39,7 @@
         }
         return flag;
     }
+    self.textChangeBlock(str);
     return true;
 }
 
