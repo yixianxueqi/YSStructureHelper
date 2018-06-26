@@ -22,26 +22,6 @@ static const NSString *key = @"KEY_UUID";
 
 @implementation UIDevice (Info)
 
-//获取app名称
-+ (NSString *)appName {
-    
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
-}
-//  获取Bundle Identifier
-+ (NSString *)bundleIdentifier {
-    
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
-}
-//获取app版本
-+ (NSString *)appVersion {
-    
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-}
-//获取app build版本
-+ (NSString *)appBuildVersion {
-    
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-}
 //获取设备序列号
 + (NSString *)deviceSerialNum {
     
@@ -306,14 +286,16 @@ static const NSString *key = @"KEY_UUID";
 
 + (NSString *)getUUID {
     
-    NSDictionary *dic = [self load:[self bundleIdentifier]];
+    NSString *bundleIdentifier = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
+    NSDictionary *dic = [self load:bundleIdentifier];
     return dic[key];
 }
 
 + (void)saveUUID:(NSString *)uuid {
     
     NSDictionary *dic = @{key:uuid};
-    NSString *service = [self bundleIdentifier];
+    NSString *bundleIdentifier = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
+    NSString *service = bundleIdentifier;
     //Get search dictionary
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:service];
     //Delete old item before add new item

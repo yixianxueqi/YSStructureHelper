@@ -88,7 +88,7 @@ static NSString * const DicVCKey = @"viewController";
                     @{DicTitleKey: @"查看弹窗", DicVCKey: @"YSShowTipDemoViewController"},
                     @{DicTitleKey: @"网络", DicVCKey: @"YSNetworkDemoViewController"},
                     @{DicTitleKey: @"appStrore", DicVCKey: @"YSAppInfoDemoViewController"},
-                    @{DicTitleKey: @"设备信息", DicVCKey: @"YSDeviceInfoDemoViewController"},
+                    @{DicTitleKey: @"设备及App信息", DicVCKey: @"YSDeviceInfoDemoViewController"},
                     @{DicTitleKey: @"宏函数", DicVCKey: @"YSDefineFuncDemoViewController"},
                     @{DicTitleKey: @"输入相关", DicVCKey: @"YSInputDemoViewController"},
                     @{DicTitleKey: @"图片相关", DicVCKey: @"YSImageDemoViewController"},

@@ -11,34 +11,6 @@
 @interface UIDevice (Info)
 
 /**
- *  获取app名称
- *
- *  @return NSString *
- */
-+ (NSString *)appName;
-
-/**
- *  获取Bundle Identifier
- *
- *  @return NSString *
- */
-+ (NSString *)bundleIdentifier;
-
-/**
- *  获取app版本
- *
- *  @return NSString *
- */
-+ (NSString *)appVersion;
-
-/**
- *  获取appBuild版本
- *
- *  @return NSString *
- */
-+ (NSString *)appBuildVersion;
-
-/**
  *  获取设备序列号
  *
  *  @notice: 删除应用重装，系统升级，系统还原，系统重刷 会变

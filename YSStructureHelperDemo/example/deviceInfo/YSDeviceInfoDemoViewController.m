@@ -8,6 +8,7 @@
 
 #import "YSDeviceInfoDemoViewController.h"
 #import "UIDevice+Info.h"
+#import "UIApplication+Info.h"
 #import <YYKit/UIDevice+YYAdd.h>
 
 static NSString * const titleKey = @"titleKey";
@@ -27,7 +28,7 @@ static NSString * const valueInfo = @"valueInfo";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.title = @"设备信息";
+    self.navigationItem.title = @"设备及App信息";
     
     double memorySize = [UIDevice getTotalMemorySize] / 1024.0 / 1024.0;
     double availabelMemorySize = [UIDevice getAvailableMemorySize] / 1024.0 / 1024.0;
@@ -35,10 +36,10 @@ static NSString * const valueInfo = @"valueInfo";
     double diskSize = [UIDevice getTotalDiskSize] / 1024.0 / 1024.0 / 1024.0;
     double diskFreeSize = [UIDevice getDiskFreeSize] / 1024.0 / 1024.0 / 1024.0;
     double diskUseSize = [UIDevice getDiskUseSize] / 1024.0 / 1024.0 / 1024.0;
-    self.list = @[@{titleKey: @"App名称", valueInfo: [UIDevice appName]},
-                  @{titleKey: @"Bundle Identifier", valueInfo: [UIDevice bundleIdentifier]},
-                  @{titleKey: @"版本", valueInfo: [UIDevice appVersion]},
-                  @{titleKey: @"Build版本号", valueInfo: [UIDevice appBuildVersion]},
+    self.list = @[@{titleKey: @"App名称", valueInfo: [UIApplication appName]},
+                  @{titleKey: @"Bundle Identifier", valueInfo: [UIApplication bundleIdentifier]},
+                  @{titleKey: @"版本", valueInfo: [UIApplication appVersion]},
+                  @{titleKey: @"Build版本号", valueInfo: [UIApplication appBuildVersion]},
                   @{titleKey: @"设备序列号", valueInfo: [UIDevice deviceSerialNum]},
                   @{titleKey: @"UUID", valueInfo: [UIDevice uuid]},
                   @{titleKey: @"设备别名", valueInfo: [UIDevice deviceNameDefineByUser]},
