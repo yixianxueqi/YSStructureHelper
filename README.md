@@ -143,7 +143,7 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
     可以修改此处，结合自身业务再定制为自身业务规则，使之适用于业务处理。
 
 ### AppStore相关
-UIApplication+AppInfo.h
+UIApplication+AppStore.h
 提供三种方法：
 1. 从App Store获取app相关信息；
 2. 跳转至该app在App Store的详情页；
@@ -151,9 +151,15 @@ UIApplication+AppInfo.h
 详情参见示例demo - YSAppInfoDemoViewController.h
 
 ### 其它类别
+
+* UIApplication+Info.h
+
+  提供访问App相关信息。例：app名称，版本号等。
+  详情参见示例demo - YSDeviceInfoDemoViewController.h
+
 * UIDevice+Info.h
 
-	提供访问设备相关属性。例：版本号，电池电量相关，内存相关，存储相关，CPU相关等。
+	提供访问设备相关属性。例：电池电量相关，内存相关，存储相关，CPU相关等。
 	详情参见示例demo - YSDeviceInfoDemoViewController.h
 	
 * NSNumber+Format.h
@@ -171,6 +177,8 @@ UIApplication+AppInfo.h
 * UIImage+Create.h
 
 	通过颜色、view、layer生成图片。
+	通过URL加载图片，利用ImageIO库，使其占用内存更低。
+	调整UIImage尺寸，利用ImageIO库，使其占用内存更低。
 	
 	
 ### 宏函数
