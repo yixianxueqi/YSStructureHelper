@@ -29,7 +29,6 @@ static YSNetWork *netwok;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         netwok = [[self alloc] init];
-        netwok.cacheTimeLimit = 60.0;
     });
     return netwok;
 }
@@ -81,6 +80,7 @@ static YSNetWork *netwok;
 
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
                    parameters:(NSDictionary *)parameters
+               cacheTimeLimit:(NSTimeInterval)timeLimit
                   cachePolicy:(YSNetworkCachePolicy)cachePolicy
                      progress:(requestProgressBlock)progress
                       success:(requestSuccessBlock)success
@@ -89,31 +89,28 @@ static YSNetWork *netwok;
     NSString *cacheKey = [self getCacheKeyFromURLString:URLString params:parameters];
     switch (cachePolicy) {
         case YSNetworkCachePolicy_cache: {
-            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cache cacheKey:cacheKey];
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cache cacheKey:cacheKey limitTime:timeLimit];
             if (isAvailableCache) {
-                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
-                    success(result);
-                }];
+                NSDictionary *result = [self.networkCache objectForKey:cacheKey];
+                success(result);
                 return nil;
             }
         }
             break;
         case YSNetworkCachePolicy_cacheWithLimitTime: {
-            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheWithLimitTime cacheKey:cacheKey];
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheWithLimitTime cacheKey:cacheKey limitTime:timeLimit];
             if (isAvailableCache) {
-                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
-                    success(result);
-                }];
+                NSDictionary *result = [self.networkCache objectForKey:cacheKey];
+                success(result);
                 return nil;
             }
         }
             break;
         case YSNetworkCachePolicy_cacheAndRequest: {
-            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheAndRequest cacheKey:cacheKey];
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheAndRequest cacheKey:cacheKey limitTime:timeLimit];
             if (isAvailableCache) {
-                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
-                    success(result);
-                }];
+                NSDictionary *result = [self.networkCache objectForKey:cacheKey];
+                success(result);
             }
         }
             break;
@@ -148,6 +145,7 @@ static YSNetWork *netwok;
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
                     parameters:(NSDictionary *)parameters
+                cacheTimeLimit:(NSTimeInterval)timeLimit
                    cachePolicy:(YSNetworkCachePolicy)cachePolicy
                       progress:(requestProgressBlock)progress
                        success:(requestSuccessBlock)success
@@ -156,32 +154,28 @@ static YSNetWork *netwok;
     NSString *cacheKey = [self getCacheKeyFromURLString:URLString params:parameters];
     switch (cachePolicy) {
         case YSNetworkCachePolicy_cache: {
-            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cache cacheKey:cacheKey];
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cache cacheKey:cacheKey limitTime:timeLimit];
             if (isAvailableCache) {
-                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
-                    success(result);
-                }];
+                NSDictionary *result = [self.networkCache objectForKey:cacheKey];
+                success(result);
                 return nil;
             }
         }
             break;
         case YSNetworkCachePolicy_cacheWithLimitTime: {
-            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheWithLimitTime cacheKey:cacheKey];
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheWithLimitTime cacheKey:cacheKey limitTime:timeLimit];
             if (isAvailableCache) {
-                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
-                    log_debug(@"使用缓存");
-                    success(result);
-                }];
+                NSDictionary *result = [self.networkCache objectForKey:cacheKey];
+                success(result);
                 return nil;
             }
         }
             break;
         case YSNetworkCachePolicy_cacheAndRequest: {
-            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheAndRequest cacheKey:cacheKey];
+            BOOL isAvailableCache = [self canUseCachePolicy:YSNetworkCachePolicy_cacheAndRequest cacheKey:cacheKey limitTime:timeLimit];
             if (isAvailableCache) {
-                [self.networkCache objectForKey:cacheKey withBlock:^(NSString *key, NSDictionary *result) {
-                    success(result);
-                }];
+                NSDictionary *result = [self.networkCache objectForKey:cacheKey];
+                success(result);
             }
         }
             break;
@@ -265,11 +259,12 @@ static YSNetWork *netwok;
  @return Bool
  */
 - (BOOL)canUseCachePolicy:(YSNetworkCachePolicy)cachePolicy
-                 cacheKey:(NSString *)cacheKey {
+                 cacheKey:(NSString *)cacheKey
+                limitTime:(NSTimeInterval)limitTime {
 
     BOOL isAvailabelCache = false;
     if (cachePolicy == YSNetworkCachePolicy_cacheWithLimitTime) {
-        isAvailabelCache = [self.networkCache containsAvailableCacheForKey:cacheKey limitTime:self.cacheTimeLimit];
+        isAvailabelCache = [self.networkCache containsAvailableCacheForKey:cacheKey limitTime:limitTime];
     } else {
         isAvailabelCache = [self.networkCache containsAvailableCacheForKey:cacheKey];
     }

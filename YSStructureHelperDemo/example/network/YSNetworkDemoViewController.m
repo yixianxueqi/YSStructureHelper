@@ -78,7 +78,7 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
     log_info(@"HEADERS: %@", [self.network getAllHeaders]);
     log_info(@"AcceptContentType: %@", [self.network getAllresponseAcceptableContentType]);
     __weak typeof(self) weakSelf = self;
-    [self.network GET:getUrl parameters:getParams cachePolicy:YSNetworkCachePolicy_cache progress:^(NSProgress *progress) {
+    [self.network GET:getUrl parameters:getParams cacheTimeLimit:60.0 cachePolicy:YSNetworkCachePolicy_cache progress:^(NSProgress *progress) {
         __strong __typeof(self) strongSelf = weakSelf;
         strongSelf.progress.progress = progress.fractionCompleted;
     } success:^(id responseObj) {
@@ -95,7 +95,7 @@ static NSString * const uploadUrl = @"https://httpbin.org/post";
     log_info(@"HEADERS: %@", [self.network getAllHeaders]);
     log_info(@"AcceptContentType: %@", [self.network getAllresponseAcceptableContentType]);
     __weak typeof(self) weakSelf = self;
-    [self.network POST:postUrl parameters:postParams cachePolicy:YSNetworkCachePolicy_cacheWithLimitTime progress:^(NSProgress *progress) {
+    [self.network POST:postUrl parameters:postParams cacheTimeLimit:60.0 cachePolicy:YSNetworkCachePolicy_cacheWithLimitTime progress:^(NSProgress *progress) {
         __strong __typeof(self) strongSelf = weakSelf;
         strongSelf.progress.progress = progress.fractionCompleted;
     } success:^(id responseObj) {

@@ -7,7 +7,9 @@
 //
 
 #import "YSNetworkCache.h"
-#import <YYCache.h>
+#import <YYKit/YYCache.h>
+#import <YYKit/YYMemoryCache.h>
+#import <YYKit/YYDiskCache.h>
 
 static NSString * const CacheTimeStamp = @"YSCacheTimeStamp";
 static NSString * const Data = @"data";
@@ -31,6 +33,12 @@ static YSNetworkCache *cache;
 }
 
 #pragma mark - public
+
+- (double)diskCost {
+    
+    return self.yyCache.diskCache.totalCost / 1024.0;
+}
+
 - (BOOL)containsAvailableCacheForKey:(NSString *)key {
 
     return [self.yyCache containsObjectForKey:key];
@@ -63,6 +71,12 @@ static YSNetworkCache *cache;
             }
         });
     }];
+}
+
+- (NSDictionary *)objectForKey:(NSString *)key {
+    
+    NSDictionary *result = (NSDictionary *)[self.yyCache objectForKey:key];
+    return result[Data];
 }
 
 - (void)setObject:(NSDictionary *)object forKey:(NSString *)key withBlock:(void(^)(void))finshBlock {
@@ -99,6 +113,11 @@ static YSNetworkCache *cache;
             }
         });
     }];
+}
+
+- (void)removeMemoryCache {
+    
+    [self.yyCache.memoryCache removeAllObjects];
 }
 
 #pragma mark - getter/setter

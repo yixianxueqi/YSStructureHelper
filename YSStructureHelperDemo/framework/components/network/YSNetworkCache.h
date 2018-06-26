@@ -22,6 +22,9 @@ typedef void(^YSNetworkCacheResultBlock)(NSString *key, NSDictionary *result);
 
 + (instancetype)shareCache;
 
+// 获取缓存文件大小,单位KB
+- (double)diskCost;
+
 //获取是否存在缓存
 - (BOOL)containsAvailableCacheForKey:(NSString *)key;
 - (BOOL)containsAvailableCacheForKey:(NSString *)key limitTime:(NSTimeInterval)seconds;
@@ -31,6 +34,9 @@ typedef void(^YSNetworkCacheResultBlock)(NSString *key, NSDictionary *result);
  在background queue内进行，结果在block内异步回调，默认在主线程回调
  */
 - (void)objectForKey:(NSString *)key withBlock:(YSNetworkCacheResultBlock)resultBlock;
+
+// 获取缓存对象，
+- (NSDictionary *)objectForKey:(NSString *)key;
 
 /*
  设置缓存对象，为防止待缓存对象过大写入时阻塞当前线程，
@@ -49,5 +55,11 @@ typedef void(^YSNetworkCacheResultBlock)(NSString *key, NSDictionary *result);
  在主线程内异步回调
  */
 - (void)removeAllCacheWithBlock:(void(^)(void))finshBlock;
+
+/**
+ 移除内存缓存
+ @note 防止内存占用过大，收到警告时可清理下内存
+ */
+- (void)removeMemoryCache;
 
 @end

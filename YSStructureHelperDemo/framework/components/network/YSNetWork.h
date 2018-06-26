@@ -46,12 +46,6 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
 
 @interface YSNetWork : NSObject
 
-/*
- 当缓存策略为YSNetworkCachePolicy_cacheWithLimitTime时有效,
- 设置在指定时间差内取缓存，超出则发起新的请求
- 默认60s
- */
-@property (nonatomic, assign) NSTimeInterval cacheTimeLimit;
 
 + (instancetype)defaultNetwork;
 #pragma mark - settings
@@ -110,6 +104,7 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
 
  @param URLString 请求地址
  @param parameters 请求参数
+ @param timeLimit 当缓存策略为YSNetworkCachePolicy_cacheWithLimitTime时有效, 设置在指定时间差内取缓存，超出则发起新的请求
  @param cachePolicy 缓存策略
  @param progress 内容下载进度
  @param success 成功回调
@@ -118,6 +113,7 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
  */
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
                    parameters:(NSDictionary *)parameters
+               cacheTimeLimit:(NSTimeInterval)timeLimit
                   cachePolicy:(YSNetworkCachePolicy)cachePolicy
                      progress:(requestProgressBlock)progress
                       success:(requestSuccessBlock)success
@@ -130,6 +126,7 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
 
  @param URLString 请求地址
  @param parameters 请求参数
+ @param timeLimit 当缓存策略为YSNetworkCachePolicy_cacheWithLimitTime时有效, 设置在指定时间差内取缓存，超出则发起新的请求
  @param cachePolicy 缓存策略
  @param progress 请求内容上传进度
  @param success 成功回调
@@ -138,6 +135,7 @@ typedef NS_ENUM(NSInteger, YSNetworkCachePolicy) {
  */
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
                    parameters:(NSDictionary *)parameters
+                cacheTimeLimit:(NSTimeInterval)timeLimit
                   cachePolicy:(YSNetworkCachePolicy)cachePolicy
                      progress:(requestProgressBlock)progress
                       success:(requestSuccessBlock)success
