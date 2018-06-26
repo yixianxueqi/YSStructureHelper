@@ -24,7 +24,7 @@
 		DB57B0F91FEA690200D2A8CE /* NSNumber+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57B0F81FEA690200D2A8CE /* NSNumber+Format.m */; };
 		DB57B0FC1FEA709D00D2A8CE /* UIDevice+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57B0FB1FEA709D00D2A8CE /* UIDevice+Info.m */; };
 		DB57B1001FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57B0FF1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m */; };
-		DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */; };
+		DB6ABE8B1FEA10E800007F24 /* UIApplication+AppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8A1FEA10E800007F24 /* UIApplication+AppStore.m */; };
 		DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6ABE8E1FEA33BE00007F24 /* YSAppInfoDemoViewController.m */; };
 		DB71FEFC205FA71F00FB14FE /* YSTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71FEFB205FA71F00FB14FE /* YSTestModel.m */; };
 		DB71FF05205FB08F00FB14FE /* YSDefineFuncDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71FF04205FB08F00FB14FE /* YSDefineFuncDemoViewController.m */; };
@@ -100,8 +100,8 @@
 		DB57B0FB1FEA709D00D2A8CE /* UIDevice+Info.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Info.m"; sourceTree = "<group>"; };
 		DB57B0FE1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDeviceInfoDemoViewController.h; sourceTree = "<group>"; };
 		DB57B0FF1FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSDeviceInfoDemoViewController.m; sourceTree = "<group>"; };
-		DB6ABE891FEA10E800007F24 /* UIApplication+AppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppInfo.h"; sourceTree = "<group>"; };
-		DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppInfo.m"; sourceTree = "<group>"; };
+		DB6ABE891FEA10E800007F24 /* UIApplication+AppStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AppStore.h"; sourceTree = "<group>"; };
+		DB6ABE8A1FEA10E800007F24 /* UIApplication+AppStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AppStore.m"; sourceTree = "<group>"; };
 		DB6ABE8D1FEA33BE00007F24 /* YSAppInfoDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAppInfoDemoViewController.h; sourceTree = "<group>"; };
 		DB6ABE8E1FEA33BE00007F24 /* YSAppInfoDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAppInfoDemoViewController.m; sourceTree = "<group>"; };
 		DB71FEFA205FA71F00FB14FE /* YSTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTestModel.h; sourceTree = "<group>"; };
@@ -317,13 +317,13 @@
 			path = deviceInfo;
 			sourceTree = "<group>";
 		};
-		DB6ABE881FEA10D100007F24 /* appInfo */ = {
+		DB6ABE881FEA10D100007F24 /* appStore */ = {
 			isa = PBXGroup;
 			children = (
-				DB6ABE891FEA10E800007F24 /* UIApplication+AppInfo.h */,
-				DB6ABE8A1FEA10E800007F24 /* UIApplication+AppInfo.m */,
+				DB6ABE891FEA10E800007F24 /* UIApplication+AppStore.h */,
+				DB6ABE8A1FEA10E800007F24 /* UIApplication+AppStore.m */,
 			);
-			path = appInfo;
+			path = appStore;
 			sourceTree = "<group>";
 		};
 		DB6ABE8C1FEA339C00007F24 /* appInfo */ = {
@@ -440,7 +440,7 @@
 			children = (
 				DBC51E3B2060FD16005E0EC2 /* input */,
 				DB06203920522C80004929CB /* monitor */,
-				DB6ABE881FEA10D100007F24 /* appInfo */,
+				DB6ABE881FEA10D100007F24 /* appStore */,
 				DBFD7EA71FDF7E1E0037939A /* network */,
 				DBF657871FD8D5AD00D9475F /* logger */,
 			);
@@ -735,7 +735,7 @@
 				A6EEF449209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m in Sources */,
 				DBC51E3F2060FD47005E0EC2 /* YSTextView.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
-				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppInfo.m in Sources */,
+				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppStore.m in Sources */,
 				DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */,
 				DB71FF05205FB08F00FB14FE /* YSDefineFuncDemoViewController.m in Sources */,
 				DBDC4CD81FD7F38C0054176E /* AppDelegate+DefineService.m in Sources */,

@@ -1,12 +1,12 @@
 //
-//  UIApplication+AppInfo.m
+//  UIApplication+AppStore.m
 //  YSStructureHelperDemo
 //
 //  Created by 君若见故 on 2017/12/20.
 //  Copyright © 2017年 develop. All rights reserved.
 //
 
-#import "UIApplication+AppInfo.h"
+#import "UIApplication+AppStore.h"
 #import <StoreKit/StoreKit.h>
 
 static NSString * const queryInfoUrl = @"https://itunes.apple.com/lookup?id=%@";
@@ -22,7 +22,7 @@ static NSString * const requestTimeStamp = @"YSRequestTimeStamp";
 static NSString * const requestSum = @"YSRequestSum";
 
 
-@implementation UIApplication (AppInfo)
+@implementation UIApplication (AppStore)
 
 + (void)getAppInfoFromAppStoreWithAppID:(NSString *)appID
                             resultBlock:(void (^)(NSDictionary *))resultBlock {

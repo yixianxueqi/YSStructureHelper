@@ -1,5 +1,5 @@
 //
-//  UIApplication+AppInfo.h
+//  UIApplication+AppStore.h
 //  YSStructureHelperDemo
 //
 //  Created by 君若见故 on 2017/12/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIApplication (AppInfo)
+@interface UIApplication (AppStore)
 
 
 /**

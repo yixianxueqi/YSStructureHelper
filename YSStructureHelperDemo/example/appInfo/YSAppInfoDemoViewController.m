@@ -7,7 +7,7 @@
 //
 
 #import "YSAppInfoDemoViewController.h"
-#import "UIApplication+AppInfo.h"
+#import "UIApplication+AppStore.h"
 
 static NSString * const appID = @"414478124";
 
@@ -22,7 +22,7 @@ static NSString * const appID = @"414478124";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.title = @"App信息";
+    self.navigationItem.title = @"AppStore";
     [self customView];
 }
 
