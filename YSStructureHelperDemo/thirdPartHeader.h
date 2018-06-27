@@ -12,6 +12,6 @@
 #ifndef thirdPartHeader_h
 #define thirdPartHeader_h
 
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 
 #endif /* thirdPartHeader_h */

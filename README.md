@@ -182,6 +182,13 @@ UIApplication+AppStore.h
 	
 	调整UIImage尺寸，利用ImageIO库，使其占用内存更低。
 	
+* UIScrollView+YSEmptyConfig.h
+
+  列表型视图无数据提示。针对三方<DZNEmptyDataSet>的封装。
+  方便快捷区分网络错误提示和无内容提示，并加强了可定制型。若有其它需求，可进一步更改此源文件满足需求。
+  demo见YSEmptyDemoViewController.h。
+
+	
 	
 ### 宏相关
 

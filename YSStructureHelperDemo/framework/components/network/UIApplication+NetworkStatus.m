@@ -7,7 +7,7 @@
 //
 
 #import "UIApplication+NetworkStatus.h"
-#import <AFNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 #import <Reachability/Reachability.h>
 #import <objc/runtime.h>
 
