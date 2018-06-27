@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "YSLogger.h"
 
 static NSString * const DicTitleKey = @"title";
 static NSString * const DicVCKey = @"viewController";
@@ -92,7 +91,8 @@ static NSString * const DicVCKey = @"viewController";
                     @{DicTitleKey: @"宏函数", DicVCKey: @"YSDefineFuncDemoViewController"},
                     @{DicTitleKey: @"输入相关", DicVCKey: @"YSInputDemoViewController"},
                     @{DicTitleKey: @"图片相关", DicVCKey: @"YSImageDemoViewController"},
-                    @{DicTitleKey: @"切圆角相关", DicVCKey: @"YSCornerRadiusDemoViewController"}
+                    @{DicTitleKey: @"切圆角相关", DicVCKey: @"YSCornerRadiusDemoViewController"},
+                    @{DicTitleKey: @"GCD相关", DicVCKey: @"YSGCDDemoViewController"},
                     ];
     }
     return _vcList;

@@ -177,11 +177,13 @@ UIApplication+AppStore.h
 * UIImage+Create.h
 
 	通过颜色、view、layer生成图片。
+	
 	通过URL加载图片，利用ImageIO库，使其占用内存更低。
+	
 	调整UIImage尺寸，利用ImageIO库，使其占用内存更低。
 	
 	
-### 宏函数
+### 宏相关
 
 * YSDefineFunc.h
 	
@@ -189,6 +191,16 @@ UIApplication+AppStore.h
 	weakObj(obj)/strongObj(obj)：强弱引用对象；
 	RGBAColor(r,g,b,a)：三原色颜色；
 	XColor(rgbValue,a)：16进制颜色；
+	
+* YSDefineVariable.h
+
+  kScreenWidth：屏幕宽度
+  kScreenHeight：屏幕高度
+  kIsiPhoneX：是否是iPhone X
+  kNavHeight：导航栏高度
+  kTabbarHeight：tabbar高度
+  kStateBarHeight：状态栏高度
+  
 
 ### 输入
 
@@ -203,6 +215,19 @@ UIApplication+AppStore.h
 * YSDefauleTextFieldDelegate.h
 	
 	UITextFieldDelegate协议的实现对象，可设置正则校验、最大数量，以及获取输入回调；用来对输入内容的校验。
+	
+### GCD
+
+* YSTimer.h
+ 
+  GCD方式的定时器实现。
+  
+  demo见YSGCDDemoViewController.h。
+  
+* YSGCDGroup.h
+
+  对于dispatch_group_t相关封装，使之使用起来更加方便。
+  demo见YSGCDDemoViewController.h。
 	
 ### future
      

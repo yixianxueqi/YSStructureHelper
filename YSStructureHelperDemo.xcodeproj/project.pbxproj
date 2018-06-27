@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A61CA1F320E1E72400F15D9C /* UIApplication+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = A61CA1F220E1E72400F15D9C /* UIApplication+Info.m */; };
+		A61CA1F920E32F7D00F15D9C /* YSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A61CA1F820E32F7D00F15D9C /* YSTimer.m */; };
+		A61CA1FD20E3398C00F15D9C /* YSGCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A61CA1FC20E3398C00F15D9C /* YSGCDGroup.m */; };
+		A61CA20120E3623200F15D9C /* YSGCDDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61CA20020E3623200F15D9C /* YSGCDDemoViewController.m */; };
 		A6D2B63420BB9AD300F382DE /* YSDefaultTextViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2B63220BB9AD300F382DE /* YSDefaultTextViewDelegate.m */; };
 		A6EEF441209B03C800EC8350 /* UIImage+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF440209B03C800EC8350 /* UIImage+CornerRadius.m */; };
 		A6EEF449209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF448209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m */; };
@@ -68,6 +71,13 @@
 		450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSStructureHelperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A61CA1F120E1E72400F15D9C /* UIApplication+Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Info.h"; sourceTree = "<group>"; };
 		A61CA1F220E1E72400F15D9C /* UIApplication+Info.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Info.m"; sourceTree = "<group>"; };
+		A61CA1F520E3291600F15D9C /* YSDefineVariable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDefineVariable.h; sourceTree = "<group>"; };
+		A61CA1F720E32F7D00F15D9C /* YSTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTimer.h; sourceTree = "<group>"; };
+		A61CA1F820E32F7D00F15D9C /* YSTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTimer.m; sourceTree = "<group>"; };
+		A61CA1FB20E3398C00F15D9C /* YSGCDGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSGCDGroup.h; sourceTree = "<group>"; };
+		A61CA1FC20E3398C00F15D9C /* YSGCDGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSGCDGroup.m; sourceTree = "<group>"; };
+		A61CA1FF20E3623200F15D9C /* YSGCDDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSGCDDemoViewController.h; sourceTree = "<group>"; };
+		A61CA20020E3623200F15D9C /* YSGCDDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSGCDDemoViewController.m; sourceTree = "<group>"; };
 		A6D2B63220BB9AD300F382DE /* YSDefaultTextViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDefaultTextViewDelegate.m; sourceTree = "<group>"; };
 		A6D2B63320BB9AD300F382DE /* YSDefaultTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDefaultTextViewDelegate.h; sourceTree = "<group>"; };
 		A6EEF43F209B03C800EC8350 /* UIImage+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CornerRadius.h"; sourceTree = "<group>"; };
@@ -185,6 +195,33 @@
 				450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A61CA1F620E32F5300F15D9C /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				A61CA1F720E32F7D00F15D9C /* YSTimer.h */,
+				A61CA1F820E32F7D00F15D9C /* YSTimer.m */,
+			);
+			path = timer;
+			sourceTree = "<group>";
+		};
+		A61CA1FA20E3397900F15D9C /* dispatchGroup */ = {
+			isa = PBXGroup;
+			children = (
+				A61CA1FB20E3398C00F15D9C /* YSGCDGroup.h */,
+				A61CA1FC20E3398C00F15D9C /* YSGCDGroup.m */,
+			);
+			path = dispatchGroup;
+			sourceTree = "<group>";
+		};
+		A61CA1FE20E3621200F15D9C /* gcd */ = {
+			isa = PBXGroup;
+			children = (
+				A61CA1FF20E3623200F15D9C /* YSGCDDemoViewController.h */,
+				A61CA20020E3623200F15D9C /* YSGCDDemoViewController.m */,
+			);
+			path = gcd;
 			sourceTree = "<group>";
 		};
 		A6EEF443209B03D900EC8350 /* UIImage */ = {
@@ -352,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				DB71FF01205FAEF500FB14FE /* YSDefineFunc.h */,
+				A61CA1F520E3291600F15D9C /* YSDefineVariable.h */,
 			);
 			path = defineFunc;
 			sourceTree = "<group>";
@@ -441,6 +479,8 @@
 		DBDC4CBC1FD7F1530054176E /* components */ = {
 			isa = PBXGroup;
 			children = (
+				A61CA1FA20E3397900F15D9C /* dispatchGroup */,
+				A61CA1F620E32F5300F15D9C /* timer */,
 				DBC51E3B2060FD16005E0EC2 /* input */,
 				DB06203920522C80004929CB /* monitor */,
 				DB6ABE881FEA10D100007F24 /* appStore */,
@@ -453,6 +493,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				A61CA1FE20E3621200F15D9C /* gcd */,
 				A6EEF446209B09EF00EC8350 /* cornerRadius */,
 				DB2BFB5C20983EF300A0EBCC /* image */,
 				DBC51E372060F92D005E0EC2 /* input */,
@@ -729,7 +770,9 @@
 				DB2BFB5F20983F1D00A0EBCC /* YSImageDemoViewController.m in Sources */,
 				DBB836BF1FE0FF9C00491251 /* YSNetworkFailureHandle.m in Sources */,
 				DB33A2621FD9736C004E6B74 /* UIView+ShowTipView.m in Sources */,
+				A61CA1FD20E3398C00F15D9C /* YSGCDGroup.m in Sources */,
 				DB57B0F91FEA690200D2A8CE /* NSNumber+Format.m in Sources */,
+				A61CA1F920E32F7D00F15D9C /* YSTimer.m in Sources */,
 				DB57B1001FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m in Sources */,
 				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
@@ -741,6 +784,7 @@
 				A6EEF449209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m in Sources */,
 				DBC51E3F2060FD47005E0EC2 /* YSTextView.m in Sources */,
 				DBF657901FD91E5400D9475F /* YSLogDetailViewController.m in Sources */,
+				A61CA20120E3623200F15D9C /* YSGCDDemoViewController.m in Sources */,
 				DB6ABE8B1FEA10E800007F24 /* UIApplication+AppStore.m in Sources */,
 				DB33A2671FD97575004E6B74 /* YSShowTipDemoViewController.m in Sources */,
 				DB71FF05205FB08F00FB14FE /* YSDefineFuncDemoViewController.m in Sources */,

@@ -17,6 +17,10 @@
 
 
 //替换系统的NSLog()
+#if DEBUG
 #define NSLog(...) log_info(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
 
 #endif /* Header_h */
