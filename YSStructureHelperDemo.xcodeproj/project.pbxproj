@@ -13,6 +13,9 @@
 		A61CA20120E3623200F15D9C /* YSGCDDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61CA20020E3623200F15D9C /* YSGCDDemoViewController.m */; };
 		A61CA20520E372BC00F15D9C /* UIScrollView+YSEmptyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A61CA20420E372BC00F15D9C /* UIScrollView+YSEmptyConfig.m */; };
 		A61CA20920E3764400F15D9C /* YSEmptyDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61CA20820E3764400F15D9C /* YSEmptyDemoViewController.m */; };
+		A61CA24220E393CF00F15D9C /* YSAuthorCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = A61CA24120E393CF00F15D9C /* YSAuthorCheck.m */; };
+		A6542BF020E47F0000F76CAC /* YSAuthorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6542BEF20E47F0000F76CAC /* YSAuthorDemoViewController.m */; };
+		A6542BF320E488B700F76CAC /* YSAuthorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6542BF220E488B700F76CAC /* YSAuthorCell.m */; };
 		A6D2B63420BB9AD300F382DE /* YSDefaultTextViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2B63220BB9AD300F382DE /* YSDefaultTextViewDelegate.m */; };
 		A6EEF441209B03C800EC8350 /* UIImage+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF440209B03C800EC8350 /* UIImage+CornerRadius.m */; };
 		A6EEF449209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF448209B0A1F00EC8350 /* YSCornerRadiusDemoViewController.m */; };
@@ -84,6 +87,12 @@
 		A61CA20420E372BC00F15D9C /* UIScrollView+YSEmptyConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YSEmptyConfig.m"; sourceTree = "<group>"; };
 		A61CA20720E3764400F15D9C /* YSEmptyDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSEmptyDemoViewController.h; sourceTree = "<group>"; };
 		A61CA20820E3764400F15D9C /* YSEmptyDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSEmptyDemoViewController.m; sourceTree = "<group>"; };
+		A61CA24020E393CF00F15D9C /* YSAuthorCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAuthorCheck.h; sourceTree = "<group>"; };
+		A61CA24120E393CF00F15D9C /* YSAuthorCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAuthorCheck.m; sourceTree = "<group>"; };
+		A6542BEE20E47F0000F76CAC /* YSAuthorDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAuthorDemoViewController.h; sourceTree = "<group>"; };
+		A6542BEF20E47F0000F76CAC /* YSAuthorDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAuthorDemoViewController.m; sourceTree = "<group>"; };
+		A6542BF120E488B700F76CAC /* YSAuthorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAuthorCell.h; sourceTree = "<group>"; };
+		A6542BF220E488B700F76CAC /* YSAuthorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAuthorCell.m; sourceTree = "<group>"; };
 		A6D2B63220BB9AD300F382DE /* YSDefaultTextViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSDefaultTextViewDelegate.m; sourceTree = "<group>"; };
 		A6D2B63320BB9AD300F382DE /* YSDefaultTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSDefaultTextViewDelegate.h; sourceTree = "<group>"; };
 		A6EEF43F209B03C800EC8350 /* UIImage+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CornerRadius.h"; sourceTree = "<group>"; };
@@ -246,6 +255,26 @@
 				A61CA20820E3764400F15D9C /* YSEmptyDemoViewController.m */,
 			);
 			path = listViewEmpty;
+			sourceTree = "<group>";
+		};
+		A61CA23F20E393B800F15D9C /* authorCheck */ = {
+			isa = PBXGroup;
+			children = (
+				A61CA24020E393CF00F15D9C /* YSAuthorCheck.h */,
+				A61CA24120E393CF00F15D9C /* YSAuthorCheck.m */,
+			);
+			path = authorCheck;
+			sourceTree = "<group>";
+		};
+		A6542BED20E47EE800F76CAC /* author */ = {
+			isa = PBXGroup;
+			children = (
+				A6542BEE20E47F0000F76CAC /* YSAuthorDemoViewController.h */,
+				A6542BEF20E47F0000F76CAC /* YSAuthorDemoViewController.m */,
+				A6542BF120E488B700F76CAC /* YSAuthorCell.h */,
+				A6542BF220E488B700F76CAC /* YSAuthorCell.m */,
+			);
+			path = author;
 			sourceTree = "<group>";
 		};
 		A6EEF443209B03D900EC8350 /* UIImage */ = {
@@ -502,6 +531,7 @@
 		DBDC4CBC1FD7F1530054176E /* components */ = {
 			isa = PBXGroup;
 			children = (
+				A61CA23F20E393B800F15D9C /* authorCheck */,
 				A61CA1FA20E3397900F15D9C /* dispatchGroup */,
 				A61CA1F620E32F5300F15D9C /* timer */,
 				DBC51E3B2060FD16005E0EC2 /* input */,
@@ -516,6 +546,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				A6542BED20E47EE800F76CAC /* author */,
 				A61CA20620E3762A00F15D9C /* listViewEmpty */,
 				A61CA1FE20E3621200F15D9C /* gcd */,
 				A6EEF446209B09EF00EC8350 /* cornerRadius */,
@@ -681,7 +712,7 @@
 				TargetAttributes = {
 					DB2F2B811FD7D7E8006674E7 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					DB2F2B991FD7D7E8006674E7 = {
 						CreatedOnToolsVersion = 9.0;
@@ -775,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6D2B63420BB9AD300F382DE /* YSDefaultTextViewDelegate.m in Sources */,
+				A6542BF020E47F0000F76CAC /* YSAuthorDemoViewController.m in Sources */,
 				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
 				DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */,
 				DBC51E3A2060F954005E0EC2 /* YSInputDemoViewController.m in Sources */,
@@ -787,6 +819,7 @@
 				DBF6578D1FD9129C00D9475F /* YSLogDemoViewController.m in Sources */,
 				DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */,
 				DBC51E362060F573005E0EC2 /* YSDefauleTextFieldDelegate.m in Sources */,
+				A6542BF320E488B700F76CAC /* YSAuthorCell.m in Sources */,
 				DB71FEFC205FA71F00FB14FE /* YSTestModel.m in Sources */,
 				A61CA1F320E1E72400F15D9C /* UIApplication+Info.m in Sources */,
 				DBDC4CCC1FD7F1530054176E /* YSLogFormat.m in Sources */,
@@ -801,6 +834,7 @@
 				DB57B0F91FEA690200D2A8CE /* NSNumber+Format.m in Sources */,
 				A61CA1F920E32F7D00F15D9C /* YSTimer.m in Sources */,
 				DB57B1001FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m in Sources */,
+				A61CA24220E393CF00F15D9C /* YSAuthorCheck.m in Sources */,
 				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
 				DBFD7EB11FDFAEFE0037939A /* YSNetworkDemoViewController.m in Sources */,
@@ -967,16 +1001,17 @@
 			baseConfigurationReference = D5270C314DEC8986BDC241BE /* Pods-YSStructureHelperDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3X434F5U2F;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VU9ZP896H5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YSStructureHelperDemo/Header.h";
 				INFOPLIST_FILE = YSStructureHelperDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.develop.all;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fullmoon.slzapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "daffb791-59f2-463d-a62c-5792b1ab50fa";
-				PROVISIONING_PROFILE_SPECIFIER = allDev;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -986,17 +1021,18 @@
 			baseConfigurationReference = 450A2E8C69BE83845CEAC996 /* Pods-YSStructureHelperDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3X434F5U2F;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VU9ZP896H5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YSStructureHelperDemo/Header.h";
 				INFOPLIST_FILE = YSStructureHelperDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.develop.all;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fullmoon.slzapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cbce9414-caf1-45ad-a2d2-a413258d0bbd";
-				PROVISIONING_PROFILE_SPECIFIER = allDis;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

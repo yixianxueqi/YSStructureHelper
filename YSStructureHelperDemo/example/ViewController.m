@@ -94,6 +94,7 @@ static NSString * const DicVCKey = @"viewController";
                     @{DicTitleKey: @"切圆角相关", DicVCKey: @"YSCornerRadiusDemoViewController"},
                     @{DicTitleKey: @"GCD相关", DicVCKey: @"YSGCDDemoViewController"},
                     @{DicTitleKey: @"列表提示图相关", DicVCKey: @"YSEmptyDemoViewController"},
+                    @{DicTitleKey: @"权限相关", DicVCKey: @"YSAuthorDemoViewController"},
                     ];
     }
     return _vcList;
