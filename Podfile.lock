@@ -27,6 +27,7 @@ PODS:
   - IQKeyboardManager (4.0.4)
   - Masonry (1.0.1)
   - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.15.3)
   - Reachability (3.2)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - IQKeyboardManager (= 4.0.4)
   - Masonry (= 1.0.1)
   - MBProgressHUD (= 1.0.0)
+  - MJRefresh (= 3.1.15.3)
   - Reachability (= 3.2)
   - YYKit (= 1.0.9)
 
@@ -52,6 +54,7 @@ SPEC REPOS:
     - IQKeyboardManager
     - Masonry
     - MBProgressHUD
+    - MJRefresh
     - Reachability
     - YYKit
 
@@ -63,9 +66,10 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 0bc94083177b1bf398e07b4ef34ceeb93a3a6311
+PODFILE CHECKSUM: b009a53bc4746b0b165c20fea1038a423f9f7047
 
 COCOAPODS: 1.5.3

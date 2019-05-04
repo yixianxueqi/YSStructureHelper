@@ -211,6 +211,9 @@
 
 - (void)emptyDataSetDidAppear:(UIScrollView *)scrollView {
     
+    if (![self btnShouldShow]) {
+        return;
+    }
     // 调整按钮大小
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     UIButton *button = [scrollView valueForKeyPath:@"emptyDataSetView.button"];

@@ -8,12 +8,12 @@
 
 #import "YSEmptyDemoViewController.h"
 #import "UIScrollView+YSEmptyConfig.h"
+#import <MJRefresh/MJRefresh.h>
 
 @interface YSEmptyDemoViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) NSArray *list;
-@property (nonatomic, assign) BOOL isLoadingData;
 
 @end
 
@@ -31,13 +31,14 @@
         make.edges.mas_equalTo(0.0);
     }];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"random" style:UIBarButtonItemStylePlain target:self action:@selector(refreshData)];
+    [self addTableRefresh];
     [self configEmptyTip];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self refreshData];
+    [self.tableview.mj_header beginRefreshing];
 }
 
 #pragma mark - public
@@ -46,11 +47,6 @@
 #pragma mark - private
 - (void)refreshData {
     
-    if (self.isLoadingData) {
-        return;
-    }
-    self.isLoadingData = true;
-    [self.view showLoading];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         int random = arc4random_uniform(2) % 2;
         if (random == 0) {
@@ -66,10 +62,17 @@
         } else {
             self.list = @[@"a", @"b", @"c"];
         }
+        if ([self.tableview.mj_header isRefreshing]) {
+            [self.tableview.mj_header endRefreshing];
+        }
         [self.tableview reloadData];
-        [self.view hideLoading];
-        self.isLoadingData = false;
     });
+}
+
+- (void)addTableRefresh {
+    
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    self.tableview.mj_header = header;
 }
 
 - (void)configEmptyTip {
@@ -80,12 +83,12 @@
     self.tableview.emptyDataTapHandle = ^{
         if (weakself.tableview.emptyType == YSEmptyType_badNetWork) {
             NSLog(@"tap handle...");
-            [weakself refreshData];
+            [weakself.tableview.mj_header beginRefreshing];
         }
     };
     self.tableview.emptyDataBtnClickHandle = ^{
         NSLog(@"btn click handle");
-        [weakself refreshData];
+        [weakself.tableview.mj_header beginRefreshing];
     };
 }
 
@@ -134,17 +137,6 @@
         [_tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
         _tableview.tableFooterView = [[UIView alloc] init];
         [_tableview deployEmptyTipConfig];
-        weakObj(self);
-        _tableview.emptyDataTapHandle = ^{
-            strongObj(self);
-            [self.view showAutoHideAlertMsg:@"emptyDataTapHandle"];
-            [self refreshData];
-        };
-        _tableview.emptyDataBtnClickHandle = ^{
-            strongObj(self);
-            [self.view showAutoHideAlertMsg:@"emptyDataBtnClickHandle"];
-            [self refreshData];
-        };
     }
     return _tableview;
 }
