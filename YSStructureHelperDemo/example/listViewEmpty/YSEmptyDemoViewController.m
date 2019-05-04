@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) NSArray *list;
+@property (nonatomic, assign) BOOL isLoadingData;
 
 @end
 
@@ -30,6 +31,7 @@
         make.edges.mas_equalTo(0.0);
     }];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"random" style:UIBarButtonItemStylePlain target:self action:@selector(refreshData)];
+    [self configEmptyTip];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -44,30 +46,70 @@
 #pragma mark - private
 - (void)refreshData {
     
-    int random = arc4random_uniform(2) % 2;
-    if (random == 0) {
-        self.list = @[];
-        int ranDom = arc4random_uniform(2) % 2;
-        ranDom == 0 ? [self configEmptyNodata] : [self configEmptyBadnetwork];
-    } else {
-        self.list = @[@"a", @"b", @"c"];
+    if (self.isLoadingData) {
+        return;
     }
-    [self.tableview reloadData];
+    self.isLoadingData = true;
+    [self.view showLoading];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        int random = arc4random_uniform(2) % 2;
+        if (random == 0) {
+            self.list = @[];
+            int ranDom = arc4random_uniform(2) % 3;
+            if (ranDom == 0) {
+                self.tableview.emptyType = YSEmptyType_noData;
+            } else if (ranDom == 1) {
+                self.tableview.emptyType = YSEmptyType_badNetWork;
+            } else {
+                self.tableview.emptyType = YSEmptyType_None;
+            }
+        } else {
+            self.list = @[@"a", @"b", @"c"];
+        }
+        [self.tableview reloadData];
+        [self.view hideLoading];
+        self.isLoadingData = false;
+    });
+}
+
+- (void)configEmptyTip {
+    
+    [self configEmptyNodata];
+    [self configEmptyBadnetwork];
+    weakObj(self);
+    self.tableview.emptyDataTapHandle = ^{
+        if (weakself.tableview.emptyType == YSEmptyType_badNetWork) {
+            NSLog(@"tap handle...");
+            [weakself refreshData];
+        }
+    };
+    self.tableview.emptyDataBtnClickHandle = ^{
+        NSLog(@"btn click handle");
+        [weakself refreshData];
+    };
 }
 
 - (void)configEmptyNodata {
     
-    self.tableview.emptyType = YSEmptyType_noData;
-//    self.tableview.noDataTipMsg = @"no data";
-//    self.tableview.noDataTipDescMsg = @"no data desc";
-    self.tableview.nodataBtnTitle = @"点击重试";
+    self.tableview.bgColor = [UIColor whiteColor];
+    self.tableview.verticalOffset = -49.0;
+    self.tableview.showInNoData = false;
+    self.tableview.noDataTipImage = [UIImage imageNamed:@"Blank_page_No_Data"];
+    self.tableview.noDataTitleStr = [[NSMutableAttributedString alloc] initWithString:@"当前暂无任何内容" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:21.0]}];
+    self.tableview.noDataDesStr = [[NSMutableAttributedString alloc] initWithString:@"请先登录或浏览其它模块内容" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0]}];
 }
 
 - (void)configEmptyBadnetwork {
     
-    self.tableview.emptyType = YSEmptyType_badNetWork;
-//    self.tableview.noDataTipMsg = @"bad network";
-//    self.tableview.noDataTipDescMsg = @"bad network desc";
+    self.tableview.bgColor = [UIColor whiteColor];
+    self.tableview.verticalOffset = -49.0;
+    self.tableview.showInBadNetwork = true;
+    self.tableview.btnSize = CGSizeMake(115.0, 32.0);
+    self.tableview.btnBGImage = [UIImage imageNamed:@"follow_btn_go"];
+    self.tableview.badNetworkBtnAttrStr = [[NSMutableAttributedString alloc] initWithString:@"重试" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15.0], NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.tableview.badNetworkTipImage = [UIImage imageNamed:@"Blank_page_Network_error"];
+    self.tableview.badNetworkTitleStr = [[NSMutableAttributedString alloc] initWithString:@"当前网络不给力" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:21.0]}];
+    self.tableview.badNetworkDesStr = [[NSMutableAttributedString alloc] initWithString:@"请检查您的网络，或点击重试" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0]}];
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource

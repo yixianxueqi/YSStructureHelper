@@ -9,13 +9,6 @@
 #import "UIScrollView+YSEmptyConfig.h"
 #import <objc/runtime.h>
 
-static NSString *noDataMsg = @"当前暂无任何内容";
-static NSString *noDataImg = @"Blank_page_No_Data";
-static NSString *noDataDescMsg = @"请先登录或浏览其它模块内容";
-static NSString *badNetworkMsg = @"当前网络不给力";
-static NSString *badNetworkImg = @"Blank_page_Network_error";
-static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
-
 @implementation UIScrollView (YSEmptyConfig)
 
 #pragma mark - public
@@ -26,108 +19,120 @@ static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
     if (@available(iOS 11.0, *)) {
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
+    self.emptyType = YSEmptyType_None;
 }
 #pragma mark - incident
 #pragma mark - private
-- (NSString *)getNoDataMessage {
+- (NSAttributedString *)getAttrTitle {
     
-    return [[self class] stringIsEmpty:self.noDataTipMsg] ? noDataMsg : self.noDataTipMsg;
+    switch (self.emptyType) {
+        case YSEmptyType_noData:{
+            return self.noDataTitleStr;
+        }break;
+        case YSEmptyType_badNetWork:{
+            return self.badNetworkTitleStr;
+        }break;
+        default:
+            return nil;
+            break;
+    }
 }
 
-- (NSString *)getNoDataDescMessage {
+- (NSAttributedString *)getAttrDescription {
     
-    return [[self class] stringIsEmpty:self.noDataTipDescMsg] ? noDataDescMsg : self.noDataTipDescMsg;
+    switch (self.emptyType) {
+        case YSEmptyType_noData:{
+            return self.noDataDesStr;
+        }break;
+        case YSEmptyType_badNetWork:{
+            return self.badNetworkDesStr;
+        }break;
+        default:
+            return nil;
+            break;
+    }
 }
 
-- (NSString *)getNoDataTipImgName {
+- (NSAttributedString *)getAttrButtonTitle {
     
-    return [[self class] stringIsEmpty:self.noDataTipImg] ? noDataImg : self.noDataTipImg;
+    if ([self btnShouldShow]) {
+        switch (self.emptyType) {
+            case YSEmptyType_noData:{
+                return self.noDataBtnAttrStr;
+            }break;
+            case YSEmptyType_badNetWork:{
+                return self.badNetworkBtnAttrStr;
+            }break;
+            default:
+                return nil;
+                break;
+        }
+    }
+    return nil;
 }
 
-- (NSString *)getBadNetworkTipImgName {
+- (UIImage *)getBtnBGImage {
     
-    return [[self class] stringIsEmpty:self.badNetworkTipImg] ? badNetworkImg : self.badNetworkTipImg ;
+    if ([self btnShouldShow]) {
+        return self.btnBGImage;
+    }
+    return nil;
 }
 
-+ (BOOL)stringIsEmpty:(NSString *)str {
+- (UIImage *)getTipImage {
     
-    return (str == nil || str.length <= 0);
+    switch (self.emptyType) {
+        case YSEmptyType_noData:{
+            return self.noDataTipImage;
+        }break;
+        case YSEmptyType_badNetWork:{
+            return self.badNetworkTipImage;
+        }break;
+        default:
+            return nil;
+            break;
+    }
+}
+
+- (BOOL)btnShouldShow {
+    
+    switch (self.emptyType) {
+        case YSEmptyType_noData:{
+            return self.showInNoData;
+        }break;
+        case YSEmptyType_badNetWork:{
+            return self.showInBadNetwork;
+        }break;
+        default:
+            return false;
+            break;
+    }
 }
 
 #pragma mark - DZNEmptyDataSetSource
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
     
-    NSString *text;
-    switch (self.emptyType) {
-        case YSEmptyType_badNetWork:
-            text = badNetworkMsg;
-            break;
-        case YSEmptyType_noData:
-            text = [self getNoDataMessage];
-            break;
-        default: text = @"";
-            break;
-    }
-    return [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:21.0f]}];
+    return [self getAttrTitle];
 }
 
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text;
-    switch (self.emptyType) {
-        case YSEmptyType_badNetWork:
-            text = badNetworkDescMsg;
-            break;
-        case YSEmptyType_noData:
-            text = [self getNoDataDescMessage];
-            break;
-        default: text = @"";
-            break;
-    }
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0]}];
-    return attributedString;
+    return [self getAttrDescription];
 }
 
 - (NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
 {
-    NSString *text;
-    switch (self.emptyType) {
-        case YSEmptyType_badNetWork:
-            text = @"";
-            break;
-        case YSEmptyType_noData:
-            text = self.nodataBtnTitle ? : @"";
-            break;
-        default: text = @"";
-            break;
-    }
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont systemFontOfSize:15.0]}];
-    return attributedString;
+    return [self getAttrButtonTitle];
 }
 
 - (UIImage *)buttonBackgroundImageForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state {
-    
-    if (self.nodataBtnTitle.length > 0) {
-        return [UIImage imageNamed:@"follow_btn_go"];
-    } else {
-        return nil;
-    }
+
+    return [self getBtnBGImage];
 }
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
     
-    NSString *imgName;
-    switch (self.emptyType) {
-        case YSEmptyType_badNetWork:
-            imgName = [self getBadNetworkTipImgName];
-            break;
-        case YSEmptyType_noData:
-            imgName = [self getNoDataTipImgName];
-            break;
-        default: imgName = @"";
-            break;
-    }
-    return [UIImage imageNamed:imgName];
+    return [self getTipImage];
 }
 
 - (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView
@@ -148,7 +153,7 @@ static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
 }
 
 - (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView {
-    return -49.0;
+    return self.verticalOffset;
 }
 
 - (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView {
@@ -158,7 +163,7 @@ static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
 #pragma mark - DZNEmptyDataSetDelegate
 - (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
 {
-    return YES;
+    return (self.emptyType != YSEmptyType_None);
 }
 
 - (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView
@@ -178,7 +183,7 @@ static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
 
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
 {
-    if (self.emptyType == YSEmptyType_badNetWork && self.emptyDataTapHandle) {
+    if (self.emptyDataTapHandle) {
         self.emptyDataTapHandle();
     }
 }
@@ -191,16 +196,9 @@ static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
 }
 
 - (void)emptyDataSetWillAppear:(UIScrollView *)scrollView {
-    
-    // 解决第一次加载时背景色问题方案
-    if (!self.emptyDataSetVisible) {
-        self.bgColor = [UIColor whiteColor];
-    } else {
-        self.bgColor = [UIColor whiteColor];
-    }
-    
+
     /*
-     问题：由于MJRefresh导致的scrollview出现偏移，致使提示图向上便宜54.0（mjRefresh高度）
+     问题：由于MJRefresh导致的scrollview出现偏移，致使提示图向上偏移54.0（mjRefresh高度）
      解决：在提示图即将出现时，将scrollview偏移恢复正常，则提示图显示正常
      */
     Class targetCls = NSClassFromString(@"DZNEmptyDataSetView");
@@ -218,7 +216,7 @@ static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
     UIButton *button = [scrollView valueForKeyPath:@"emptyDataSetView.button"];
     if ([button isKindOfClass:[UIButton class]]) {
         // 调整宽度
-        CGFloat space = (screenSize.width - 114.5) * 0.5;
+        CGFloat space = (screenSize.width - self.btnSize.width) * 0.5;
         for (NSLayoutConstraint *constraint in button.superview.constraints) {
             if (constraint.firstItem == button && constraint.firstAttribute == NSLayoutAttributeLeading) {
                 constraint.constant = space;
@@ -227,16 +225,17 @@ static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
             }
         }
         // 调整高度
+        CGFloat height = self.btnSize.height;
         for (NSLayoutConstraint *constraint in button.constraints) {
             if (constraint.firstItem == button && constraint.firstAttribute == NSLayoutAttributeHeight) {
-                constraint.constant = 32.0;
+                constraint.constant = height;
             }
         }
     }
 }
 
 
-#pragma mark -getter/setter
+#pragma mark - getter/setter
 
 - (void)setEmptyType:(YSEmptyType)emptyType {
     
@@ -246,90 +245,124 @@ static NSString *badNetworkDescMsg = @"请检查您的网络，或点击重试";
         [self performSelector:@selector(reloadEmptyDataSet)];
     }
 }
-
 - (YSEmptyType)emptyType {
     
     return (YSEmptyType)[objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
 - (void)setEmptyDataTapHandle:(void (^)(void))emptyDataTapHandle {
-    
     objc_setAssociatedObject(self, @selector(emptyDataTapHandle), emptyDataTapHandle, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
-
 - (void (^)(void))emptyDataTapHandle {
-    
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setEmptyDataBtnClickHandle:(void (^)(void))emptyDataBtnClickHandle {
+    objc_setAssociatedObject(self, @selector(emptyDataBtnClickHandle), emptyDataBtnClickHandle, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (void (^)(void))emptyDataBtnClickHandle {
     return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setBgColor:(UIColor *)bgColor {
-    
     objc_setAssociatedObject(self, @selector(bgColor), bgColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-
 - (UIColor *)bgColor {
-    
-    return (UIColor *)objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setNoDataTipMsg:(NSString *)noDataTipMsg {
-    
-    objc_setAssociatedObject(self, @selector(noDataTipMsg), noDataTipMsg, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (NSString *)noDataTipMsg {
-    
-    return (NSString *)objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setNoDataTipDescMsg:(NSString *)noDataTipDescMsg {
-    
-    objc_setAssociatedObject(self, @selector(noDataTipDescMsg), noDataTipDescMsg, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (NSString *)noDataTipDescMsg {
-    
-    return (NSString *)objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setNoDataTipImg:(NSString *)noDataTipImg {
-    
-    objc_setAssociatedObject(self, @selector(noDataTipImg), noDataTipImg, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (NSString *)noDataTipImg {
-    
-    return (NSString *)objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setBadNetworkTipImg:(NSString *)badNetworkTipImg {
-    
-    objc_setAssociatedObject(self, @selector(badNetworkTipImg), badNetworkTipImg, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (NSString *)badNetworkTipImg {
-    
-    return (NSString *)objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setNodataBtnTitle:(NSString *)nodataBtnTitle {
-    
-    objc_setAssociatedObject(self, @selector(nodataBtnTitle), nodataBtnTitle, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (NSString *)nodataBtnTitle {
-    
-    return (NSString *)objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setEmptyDataBtnClickHandle:(void (^)(void))emptyDataBtnClickHandle {
-    
-    objc_setAssociatedObject(self, @selector(emptyDataBtnClickHandle), emptyDataBtnClickHandle, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (void (^)(void))emptyDataBtnClickHandle {
-    
     return objc_getAssociatedObject(self, _cmd);
 }
+
+- (void)setVerticalOffset:(CGFloat)verticalOffset {
+    objc_setAssociatedObject(self, @selector(verticalOffset), @(verticalOffset), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (CGFloat)verticalOffset {
+    return [objc_getAssociatedObject(self, _cmd) floatValue];
+}
+
+- (void)setBtnSize:(CGSize)btnSize {
+    objc_setAssociatedObject(self, @selector(btnSize), [NSValue valueWithCGSize:btnSize], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (CGSize)btnSize {
+    return [objc_getAssociatedObject(self, _cmd) CGSizeValue];
+}
+
+
+- (void)setBtnBGImage:(UIImage *)btnBGImage {
+    objc_setAssociatedObject(self, @selector(btnBGImage), btnBGImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (UIImage *)btnBGImage {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setShowInNoData:(BOOL)showInNoData {
+    objc_setAssociatedObject(self, @selector(showInNoData), @(showInNoData), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (BOOL)showInNoData {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+
+- (void)setShowInBadNetwork:(BOOL)showInBadNetwork {
+    objc_setAssociatedObject(self, @selector(showInBadNetwork), @(showInBadNetwork), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (BOOL)showInBadNetwork {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+
+- (void)setNoDataTipImage:(UIImage *)noDataTipImage {
+    objc_setAssociatedObject(self, @selector(noDataTipImage), noDataTipImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (UIImage *)noDataTipImage {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setNoDataTitleStr:(NSMutableAttributedString *)noDataTitleStr {
+    objc_setAssociatedObject(self, @selector(noDataTitleStr), noDataTitleStr, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (NSMutableAttributedString *)noDataTitleStr {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setNoDataDesStr:(NSMutableAttributedString *)noDataDesStr {
+    objc_setAssociatedObject(self, @selector(noDataDesStr), noDataDesStr, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (NSMutableAttributedString *)noDataDesStr {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setNoDataBtnAttrStr:(NSMutableAttributedString *)noDataBtnAttrStr {
+    objc_setAssociatedObject(self, @selector(noDataBtnAttrStr), noDataBtnAttrStr, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (NSMutableAttributedString *)noDataBtnAttrStr {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setBadNetworkTipImage:(UIImage *)badNetworkTipImage {
+    objc_setAssociatedObject(self, @selector(badNetworkTipImage), badNetworkTipImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIImage *)badNetworkTipImage {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setBadNetworkTitleStr:(NSMutableAttributedString *)badNetworkTitleStr {
+    objc_setAssociatedObject(self, @selector(badNetworkTitleStr), badNetworkTitleStr, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (NSMutableAttributedString *)badNetworkTitleStr {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setBadNetworkDesStr:(NSMutableAttributedString *)badNetworkDesStr {
+    objc_setAssociatedObject(self, @selector(badNetworkDesStr), badNetworkDesStr, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (NSMutableAttributedString *)badNetworkDesStr {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setBadNetworkBtnAttrStr:(NSMutableAttributedString *)badNetworkBtnAttrStr {
+    objc_setAssociatedObject(self, @selector(badNetworkBtnAttrStr), badNetworkBtnAttrStr, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (NSMutableAttributedString *)badNetworkBtnAttrStr {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
 
 @end
