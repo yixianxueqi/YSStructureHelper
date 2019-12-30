@@ -60,6 +60,8 @@
 		DBFD7EAA1FDF7E3B0037939A /* YSNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFD7EA91FDF7E3B0037939A /* YSNetWork.m */; };
 		DBFD7EAD1FDF7F2E0037939A /* UIApplication+NetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFD7EAC1FDF7F2E0037939A /* UIApplication+NetworkStatus.m */; };
 		DBFD7EB11FDFAEFE0037939A /* YSNetworkDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFD7EB01FDFAEFE0037939A /* YSNetworkDemoViewController.m */; };
+		FB6ADD9623B9E3DE007E6D0F /* YSConvenienceThread.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6ADD9423B9E3DE007E6D0F /* YSConvenienceThread.m */; };
+		FB6ADD9A23B9E448007E6D0F /* YSThreadDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6ADD9923B9E448007E6D0F /* YSThreadDemoViewController.m */; };
 		FB6DDBD123598D0D007101D4 /* NSObject+YSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6DDBD023598D0D007101D4 /* NSObject+YSNotification.m */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +184,10 @@
 		DBFD7EAC1FDF7F2E0037939A /* UIApplication+NetworkStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkStatus.m"; sourceTree = "<group>"; };
 		DBFD7EAF1FDFAEFE0037939A /* YSNetworkDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSNetworkDemoViewController.h; sourceTree = "<group>"; };
 		DBFD7EB01FDFAEFE0037939A /* YSNetworkDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSNetworkDemoViewController.m; sourceTree = "<group>"; };
+		FB6ADD9423B9E3DE007E6D0F /* YSConvenienceThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSConvenienceThread.m; sourceTree = "<group>"; };
+		FB6ADD9523B9E3DE007E6D0F /* YSConvenienceThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSConvenienceThread.h; sourceTree = "<group>"; };
+		FB6ADD9823B9E448007E6D0F /* YSThreadDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSThreadDemoViewController.h; sourceTree = "<group>"; };
+		FB6ADD9923B9E448007E6D0F /* YSThreadDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSThreadDemoViewController.m; sourceTree = "<group>"; };
 		FB6DDBCF23598D0D007101D4 /* NSObject+YSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YSNotification.h"; sourceTree = "<group>"; };
 		FB6DDBD023598D0D007101D4 /* NSObject+YSNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YSNotification.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -534,6 +540,7 @@
 		DBDC4CBC1FD7F1530054176E /* components */ = {
 			isa = PBXGroup;
 			children = (
+				FB6ADD9323B9E3C4007E6D0F /* thread */,
 				A61CA23F20E393B800F15D9C /* authorCheck */,
 				A61CA1FA20E3397900F15D9C /* dispatchGroup */,
 				A61CA1F620E32F5300F15D9C /* timer */,
@@ -549,6 +556,7 @@
 		DBDC4CD41FD7F2D00054176E /* example */ = {
 			isa = PBXGroup;
 			children = (
+				FB6ADD9723B9E42A007E6D0F /* thread */,
 				A6542BED20E47EE800F76CAC /* author */,
 				A61CA20620E3762A00F15D9C /* listViewEmpty */,
 				A61CA1FE20E3621200F15D9C /* gcd */,
@@ -664,6 +672,24 @@
 				DBFD7EB01FDFAEFE0037939A /* YSNetworkDemoViewController.m */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		FB6ADD9323B9E3C4007E6D0F /* thread */ = {
+			isa = PBXGroup;
+			children = (
+				FB6ADD9523B9E3DE007E6D0F /* YSConvenienceThread.h */,
+				FB6ADD9423B9E3DE007E6D0F /* YSConvenienceThread.m */,
+			);
+			path = thread;
+			sourceTree = "<group>";
+		};
+		FB6ADD9723B9E42A007E6D0F /* thread */ = {
+			isa = PBXGroup;
+			children = (
+				FB6ADD9823B9E448007E6D0F /* YSThreadDemoViewController.h */,
+				FB6ADD9923B9E448007E6D0F /* YSThreadDemoViewController.m */,
+			);
+			path = thread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -791,7 +817,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
@@ -802,7 +828,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YSStructureHelperDemo/Pods-YSStructureHelperDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -813,6 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6D2B63420BB9AD300F382DE /* YSDefaultTextViewDelegate.m in Sources */,
+				FB6ADD9623B9E3DE007E6D0F /* YSConvenienceThread.m in Sources */,
 				A6542BF020E47F0000F76CAC /* YSAuthorDemoViewController.m in Sources */,
 				DBDC4CCE1FD7F1530054176E /* ViewController.m in Sources */,
 				DB6ABE8F1FEA33BE00007F24 /* YSAppInfoDemoViewController.m in Sources */,
@@ -844,6 +871,7 @@
 				DB57B1001FEA730600D2A8CE /* YSDeviceInfoDemoViewController.m in Sources */,
 				A61CA24220E393CF00F15D9C /* YSAuthorCheck.m in Sources */,
 				DBDC4CD11FD7F1530054176E /* main.m in Sources */,
+				FB6ADD9A23B9E448007E6D0F /* YSThreadDemoViewController.m in Sources */,
 				DBDC4CCB1FD7F1530054176E /* YSLogger.m in Sources */,
 				DBFD7EB11FDFAEFE0037939A /* YSNetworkDemoViewController.m in Sources */,
 				DBDC4CD21FD7F1530054176E /* AppDelegate.m in Sources */,

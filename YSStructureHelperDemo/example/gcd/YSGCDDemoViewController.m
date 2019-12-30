@@ -30,9 +30,9 @@
     // 测试定时器
     [self testTimer];
     // 测试group异步任务
-    [self testAsyncGroupNotify];
+//    [self testAsyncGroupNotify];
     // 测试group同步任务
-//    [self testSyncGroupNotify];
+    [self testSyncGroupNotify];
     // 测试group等待处理
 //    [self testGroupWait];
 }

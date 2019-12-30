@@ -46,7 +46,7 @@ DEPENDENCIES:
   - YYKit (= 1.0.9)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Aspects
     - CocoaLumberjack
@@ -72,4 +72,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b009a53bc4746b0b165c20fea1038a423f9f7047
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.0.beta.2
